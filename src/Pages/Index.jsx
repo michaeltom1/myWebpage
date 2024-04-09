@@ -3,7 +3,7 @@
 function Index() {
   return (
     <>
-      <nav className="flex items-center  bg-[#041644] p-2 justify-between shadow-sm px-5 ">
+      <nav className="flex items-center  bg-[#041644] p-2 justify-between shadow-sm px-4 ">
         <div>
           <button className="btn-m hover:p-[0.6em]">Michael</button>
         </div>

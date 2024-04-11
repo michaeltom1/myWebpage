@@ -15,8 +15,9 @@ function Sections() {
         <div className="flex place-content-center">
           <div className="w-[50%] h-56 rounded-full mb-5  hover:border-slate-400 hover:bg-slate-500 place-content-center grid">
             <img
-              src="./src/assets/michael.png"
-              alt="michael tom"
+              // src="./src/assets/michael.png"
+              src="./public/michael.png"
+              alt="Michael Tom"
               className=" bg-slate-900 rounded-full mb-5 hover:border-slate-400 hover:bg-slate-500 w-50"
             />
           </div>

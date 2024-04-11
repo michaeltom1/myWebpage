@@ -19,8 +19,8 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
   text-decoration: inherit;
+  
 }
 a:hover {
   color: #535bf2;
@@ -31,6 +31,7 @@ body {
   /* display: flex; */
   min-width: 320px;
   min-height: 100vh;
+  scroll-behavior: smooth;
 }
 
 h1 {
@@ -49,11 +50,32 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+input{
+  border: none;
+  outline: none;
+}
 
 
 .btn-m{
   padding: 0.6em 1.3em;
 
+}
+#nav-side{
+  height: 80vh;
+  width: 50%;
+  top: 60px;
+  right: 0;
+  padding-top: 40px;
+  padding-left: 10px;
+  position: absolute;
+  gap: 1.25rem;
+  background: rgb(15, 23, 42 );
+  /* background: #151236; */
+  transition: 0.3s ease-in-out;
+  border-radius: 0 0 0 10px;
+}
+#nav-side.active{
+right: -300px;
 }
 
 @media (prefers-color-scheme: light) {

@@ -5,7 +5,7 @@ function Footer() {
     <>
       <footer className="bg-[#080c16] py-5">
         <div>
-          <h2 className="text-center font-bold text-[1rem] text-slate-600 text-[#38bdf8]">
+          <h2 className="text-center font-bold text-[1rem] text-slate-600">
             {" "}
             MICHAEL TOM
           </h2>

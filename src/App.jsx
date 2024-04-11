@@ -5,11 +5,11 @@ import Footer from "./Pages/Footer";
 function App() {
   return (
     <>
-      <body className="bg-[#0b1120]">
+      <body className="dark:bg-[#0b1120]">
         <Index />
         <Header />
         <Sections />
-        <Footer/>
+        <Footer />
       </body>
     </>
   );

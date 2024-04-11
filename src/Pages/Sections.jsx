@@ -1,9 +1,9 @@
 function Sections() {
   return (
     <>
-      <div className="px-[20px]">
-        <h2 className="text-center font-extrabold text-[2rem]">ABOUT ME</h2>
-        <hr />
+      <div className="px-[20px] ">
+        <h2 id="about" className="text-center font-extrabold text-[2rem]">ABOUT ME</h2>
+        <hr className="border-[#38bdf8]" />
         <div className="p-5 text-center items-center">
           <p>
             Greetings! I&apos;m Michael Tom, a passionate web developer and
@@ -12,14 +12,19 @@ function Sections() {
             showcases my journey and expertise in these fields
           </p>
         </div>
-        <div className="">
-          <img src="" alt="" />
+        <div className="flex place-content-center">
+          <div className="w-[50%] h-56 rounded-full mb-5  hover:border-slate-400 hover:bg-slate-500 place-content-center grid">
+            <img
+              src="./src/assets/michael.png"
+              alt="michael tom"
+              className=" bg-slate-900 rounded-full mb-5 hover:border-slate-400 hover:bg-slate-500 w-50"
+            />
+          </div>
         </div>
-
         {/* under const */}
 
-        <h2 className="text-center font-extrabold text-[2rem]">PROJECTS</h2>
-        <hr />
+        <h2 id="projects" className="text-center font-extrabold text-[2rem]">PROJECTS</h2>
+        <hr className="border-[#38bdf8]" />
         <div className="p-5 text-center items-center">
           <p>
             Explore a curated selection of my projects, including website
@@ -28,14 +33,17 @@ function Sections() {
             challenges, and solutions implemented
           </p>
         </div>
-        <div className="">
+        <div className="w-[100%] h-60 bg-slate-900 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 hover:bg-slate-600">
           <img src="" alt="" />
         </div>
 
         {/* under const2 */}
 
-        <h2 className="text-center font-extrabold text-[2rem]">TESTIMONIALS</h2>
-        <hr />
+        <h2 id="testimonials" className="text-center font-extrabold text-[2rem]">
+          <span className="material-symbols-outlined mx-3">group</span>
+          TESTIMONIALS
+        </h2>
+        <hr className="border-[#38bdf8]" />
         <div className="p-5 text-center items-center">
           <p>
             Hear what my clients have to say! Testimonials from satisfied
@@ -43,22 +51,59 @@ function Sections() {
             deliver exceptional results
           </p>
         </div>
-        <div className="">
+        <div className="w-[100%] h-60 bg-slate-900 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 hover:bg-slate-500">
           <img src="" alt="" />
         </div>
 
         {/* under const 3 */}
 
-        <h2 className="text-center font-extrabold text-[2rem]">CONTACT ME</h2>
-        <hr />
+        <h2
+          id="contact"
+          className="text-center font-extrabold text-[2rem] border-[#38bdf8]"
+        >
+          <span className="material-symbols-outlined  mx-2">call</span>
+          CONTACT ME
+        </h2>
+        <hr className="border-[#38bdf8]" />
         <div className="p-5 text-center items-center">
           <p>
             Ready to start a project together? Reach out to me via email at
             mic81070@example.com or connect with me on Facebook and WhatsApp
           </p>
         </div>
-        <div className="">
-          <img src="" alt="" />
+        <div className="w-[100%] h-60 bg-slate-900 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 backdrop-blur-lg items-center ">
+          <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
+            {/* <label >Name</label> */}
+            <input
+              type="email"
+              placeholder="Name"
+              required
+              className="bg-transparent "
+            />
+          </div>
+
+          <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
+            {/* <label >Email</label> */}
+            <input
+              type="email"
+              placeholder="Email"
+              required
+              className="bg-transparent "
+            />
+            <span className="material-symbols-outlined">mail</span>
+          </div>
+          <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
+            {/* <label >Message</label> */}
+            <input
+              type="email"
+              placeholder="Message"
+              required
+              className="bg-transparent "
+            />
+          </div>
+          <div className=" items-center m-4 pb-2 flex  gap-2 justify-between pr-2">
+            <button className="w-[100%]"> Submit</button>
+          </div>
         </div>
       </div>
     </>

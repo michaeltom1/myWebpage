@@ -9,6 +9,9 @@ function Footer() {
             {" "}
             MICHAEL TOM
           </h2>
+          <p className="text-center font-bold text-sm text-slate-500">
+            © Copyright Michael Tom. Design And Developed By Michael
+          </p>
         </div>
       </footer>
     </>

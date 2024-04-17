@@ -1,4 +1,6 @@
-import michael from "../assets/michael.png"
+import michael from "../assets/michael.png";
+import boy from "../assets/boy.jpg";
+// import woman from "../assets/woman(1).jpg";
 function Sections() {
   return (
     <>
@@ -8,7 +10,7 @@ function Sections() {
         </h2>
         <hr className="border-[#38bdf8]" />
         <div className="md:flex md:flex-row-reverse md:gap-10 md:mt-5 md:mx-20 md:justify-center">
-          <div className="p-5 text-center items-center md:w-[100%] md:text-left md:text-[22px]">
+          <div className="p-5 text-lg text-center items-center md:w-[100%] md:text-left md:text-[22px]">
             <p>
               Greetings! I&apos;m Michael Tom, a passionate web developer and
               graphic designer with over a year of experience in crafting
@@ -17,11 +19,11 @@ function Sections() {
             </p>
           </div>
           <div className="flex place-content-center md:block md:w-[50%]">
-            <div className="w-[50%]  md:rounded-sm h-56 rounded-full mb-5 place-content-center grid md:place-content-start md:h-[25rem] md:w-[100%] md:bg-slate-500 hover:hover:bg-[#38bdf8]">
+            <div className="w-[50%]  md:rounded-sm h-56 rounded-full mb-5 place-content-center grid md:place-content-start md:h-[25rem] md:w-[100%] md:bg-transparent">
               <img
                 src={michael}
                 alt="Michael Tom"
-                className=" bg-slate-900 rounded-full mb-5 hover:border-slate-400 w-50 md:w-25 md:h-[25rem] md:rounded-2xl md:border-y-2 md:border-x-2 md:border-slate-500 hover:hover:border-[#38bdf8]"
+                className=" bg-slate-900 rounded-full mb-5 hover:border-slate-400 w-50 md:w-25 md:h-[25rem] md:rounded-2xl md:border-y-2 md:border-x-2 md:border-slate-500 hover:hover:border-[#38bdf8] m-5"
               />
             </div>
           </div>
@@ -32,7 +34,7 @@ function Sections() {
           PROJECTS
         </h2>
         <hr className="border-[#38bdf8]" />
-        <div className="p-5 text-center items-center md:text-[22px]">
+        <div className="p-5 text-lg text-center items-center md:text-[22px]">
           <p>
             Explore a curated selection of my projects, including website
             designs, logo creations, branding campaigns, and more. Each project
@@ -54,16 +56,38 @@ function Sections() {
           TESTIMONIALS
         </h2>
         <hr className="border-[#38bdf8]" />
-        <div className="p-5 text-center items-center md:text-[22px]">
+        <div className="p-5 text-center items-center text-lg md:text-[22px]">
           <p>
             Hear what my clients have to say! Testimonials from satisfied
             clients underscore my dedication, professionalism, and ability to
             deliver exceptional results
           </p>
         </div>
-        <div className="w-[100%] h-60 bg-slate-900 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 hover:bg-slate-500">
-          <img src="" alt="" />
-        </div>
+
+        <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-2 mb-2">
+          <img
+            className="w-24 h-24 rounded-full"
+            src={boy}
+            alt=""
+            width={384}
+            height={512}
+          />
+
+          <div className="pt-6 space-y-4">
+            <blockquote>
+              <p className="text-lg px-10 ">
+                &quot;Michael pushes boundaries. His unconventional designs
+                challenge norms and leave a lasting impression. His creativity
+                knows no bounds, and our brand is forever transformed because of
+                it.&quot;
+              </p>
+            </blockquote>
+            <figcaption className="pb-2 px-10">
+              <div>Eduok Tom</div>
+              <div>Web Developer</div>
+            </figcaption>
+          </div>
+        </figure>
 
         {/* under const 3 */}
 
@@ -75,13 +99,13 @@ function Sections() {
           CONTACT ME
         </h2>
         <hr className="border-[#38bdf8]" />
-        <div className="p-5 text-center items-center md:text-[22px]">
+        <div className="p-5 text-center items-center text-lg md:text-[22px]">
           <p>
             Ready to start a project together? Reach out to me via email at
-            mic81070@example.com or connect with me on Facebook and WhatsApp
+            mic81070@gmail.com or connect with me on Facebook and WhatsApp
           </p>
         </div>
-        <div className="w-[100%] h-60 bg-slate-900 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 backdrop-blur-lg items-center md:w-1/2">
+        <div className="w-[100%] h-60 bg-slate-900 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 items-center md:w-1/2">
           <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
             {/* <label >Name</label> */}
             <input

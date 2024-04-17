@@ -25,19 +25,19 @@ class Index extends Component {
                 }
                 // className="active gap-5 md:hover:p-1 bg-slate-900 absolute right-0 top-[60px] w-[50%] h-[100vh] pt-[40px] pl-[10px] shadow-md"
               >
-                <li className="md:hover:bg-blue-400 mb-[25px]">
+                <li className="mb-[25px]">
                   <a href="#">HOME</a>
                 </li>
-                <li className="md:hover:bg-blue-400 mb-[25px]">
+                <li className="mb-[25px]">
                   <a href="#about">ABOUT ME</a>
                 </li>
-                <li className="md:hover:bg-blue-400 mb-[25px]">
+                <li className="mb-[25px]">
                   <a href="#projects">PROJECTS</a>
                 </li>
-                <li className="md:hover:bg-blue-400 mb-[25px]">
+                <li className="mb-[25px]">
                   <a href="#testimonials">TESTIMONIALS</a>
                 </li>
-                <li className="md:hover:bg-blue-400 mb-[25px]">
+                <li className="mb-[25px]">
                   <a href="#contact">CONTACTS</a>
                 </li>
               </ul>

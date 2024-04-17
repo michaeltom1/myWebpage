@@ -19,7 +19,6 @@ function Sections() {
           <div className="flex place-content-center md:block md:w-[50%]">
             <div className="w-[50%]  md:rounded-sm h-56 rounded-full mb-5 place-content-center grid md:place-content-start md:h-[25rem] md:w-[100%] md:bg-slate-500 hover:hover:bg-[#38bdf8]">
               <img
-                
                 src={michael}
                 alt="Michael Tom"
                 className=" bg-slate-900 rounded-full mb-5 hover:border-slate-400 w-50 md:w-25 md:h-[25rem] md:rounded-2xl md:border-y-2 md:border-x-2 md:border-slate-500 hover:hover:border-[#38bdf8]"
@@ -33,7 +32,7 @@ function Sections() {
           PROJECTS
         </h2>
         <hr className="border-[#38bdf8]" />
-        <div className="p-5 text-center items-center">
+        <div className="p-5 text-center items-center md:text-[22px]">
           <p>
             Explore a curated selection of my projects, including website
             designs, logo creations, branding campaigns, and more. Each project
@@ -55,7 +54,7 @@ function Sections() {
           TESTIMONIALS
         </h2>
         <hr className="border-[#38bdf8]" />
-        <div className="p-5 text-center items-center">
+        <div className="p-5 text-center items-center md:text-[22px]">
           <p>
             Hear what my clients have to say! Testimonials from satisfied
             clients underscore my dedication, professionalism, and ability to
@@ -76,13 +75,13 @@ function Sections() {
           CONTACT ME
         </h2>
         <hr className="border-[#38bdf8]" />
-        <div className="p-5 text-center items-center">
+        <div className="p-5 text-center items-center md:text-[22px]">
           <p>
             Ready to start a project together? Reach out to me via email at
             mic81070@example.com or connect with me on Facebook and WhatsApp
           </p>
         </div>
-        <div className="w-[100%] h-60 bg-slate-900 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 backdrop-blur-lg items-center ">
+        <div className="w-[100%] h-60 bg-slate-900 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 backdrop-blur-lg items-center md:w-1/2">
           <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
             {/* <label >Name</label> */}
             <input

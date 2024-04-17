@@ -1,3 +1,4 @@
+import Resume from "../assets/Resume.pdf";
 function Header() {
   return (
     <>
@@ -12,11 +13,7 @@ function Header() {
             GRAPHIC DESIGNER AND WEB DEVELOPER
           </h3>
 
-          <a
-            href="./src/assets/menu-img.png"
-            download={menubar}
-            className="text-center"
-          >
+          <a href={Resume} download="Michael_resume" className="text-center">
             <button className="text-center bg-[#38bdf8] mt-5">
               Download Resume
             </button>

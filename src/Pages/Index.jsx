@@ -48,7 +48,7 @@ class Index extends Component {
               <a href="#">HOME</a>
             </li>
             <li className="md:hover:bg-blue-400 ">
-              4<a href="#about">ABOUT ME</a>
+              <a href="#about">ABOUT ME</a>
             </li>
             <li className="md:hover:bg-blue-400 ">
               <a href="#projects">PROJECTS</a>

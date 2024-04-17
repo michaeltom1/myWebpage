@@ -37,7 +37,7 @@ function Sections() {
           </div>
         </div>
         {/* under const */}
-        <div className="px-10 sm:p-20 sec2">
+        <div className="px-5 sm:p-20 sec2">
           <h2 id="projects" className="text-center font-extrabold text-[2rem]">
             <span className="material-symbols-outlined">work</span>
             {/* <MdWork /> */}

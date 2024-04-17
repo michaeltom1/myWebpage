@@ -32,6 +32,17 @@ body {
   min-width: 320px;
   min-height: 100vh;
   scroll-behavior: smooth;
+
+ }
+
+ .header{
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 20%, rgba(2,31,69,1) 60%, rgba(2,48,86,1) 89%, rgba(18,61,92,1) 100%);
+   }
+
+   .sec2{
+    background: rgb(0,0,0);
+background: linear-gradient(90deg, rgba(0,0,0,1) 53%, rgba(13,31,62,1) 83%);
 }
 
 h1 {
@@ -69,16 +80,16 @@ input{
   top: 60px;
   right: 0;
   padding-top: 40px;
-  padding-left: 10px;
+  padding-left: 20px;
   position: absolute;
   gap: 1.25rem;
   background: rgb(15, 23, 42 );
-  /* background: #151236; */
+  background: #110e33;
   transition: 0.3s ease-in-out;
-  border-radius: 0 0 0 10px;
+  border-radius: 15px 15px 20px 20px;
 }
 #nav-side.active{
-right: -300px;
+right: -400px;
 }
 
  /* .download-button {

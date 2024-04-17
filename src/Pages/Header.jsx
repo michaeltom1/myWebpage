@@ -4,7 +4,7 @@ function Header() {
     <>
       <header className="header px-[20px] ">
         <div className="  mt-12 rounded-lg p-2 h-[60vh] place-content-center grid md:h-[100vh]">
-          <h1 className=" text-slate-900 md:text-[5rem] font-extrabold text-center sm:text-5xl text-6xl dark:text-white">
+          <h1 className=" text-slate-100 md:text-[5rem] font-extrabold text-center sm:text-5xl text-6xl dark:text-white">
             HI, I AM <br />
             MICHAEL <br />
             TOM.

@@ -92,30 +92,16 @@ input{
 right: -400px;
 }
 
- /* .download-button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 0;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        .download-button:hover {
-            background-color: #0056b3;
-        } */
-
+ 
 @media (prefers-color-scheme: light) {
   :root {
     color: #ffff;
-    background-color: #ffffff;
+    background-color: transparent;
   }
   a:hover {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #333;
   }
 }

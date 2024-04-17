@@ -2,13 +2,13 @@ function Header() {
   return (
     <>
       <header className="px-[20px]">
-        <div className=" m-2 mt-12 rounded-lg p-2 border-red border-teal-100 h-[60vh] place-content-center grid">
-          <h1 className="text-slate-900 font-extrabold text-6xl sm:text-5xl lg:text-6xl tracking-tight text-center dark:text-white">
+        <div className=" m-2 mt-12 rounded-lg p-2 h-[60vh] place-content-center grid md:h-[100vh]">
+          <h1 className=" text-slate-900 md:text-[5rem] font-extrabold text-center sm:text-5xl text-6xl dark:text-white">
             HI, I AM <br />
             MICHAEL <br />
             TOM.
           </h1>
-          <h3 className="text-center text-[1rem] mt-10 font-bold">
+          <h3 className="text-center text-[1rem] mt-10 font-bold md:text-[2rem]">
             GRAPHIC DESIGNER AND WEB DEVELOPER
           </h3>
 

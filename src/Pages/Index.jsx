@@ -1,14 +1,12 @@
 import { Component } from "react";
 
-
 class Index extends Component {
   state = { clicked: false };
   handelClick = () => {
-    this.setState({clicked: !this.state.clicked})
-  }
+    this.setState({ clicked: !this.state.clicked });
+  };
 
-  render(){
-
+  render() {
     return (
       <>
         <nav className="flex items-center  bg-[#041644] p-2 justify-between shadow-sm px-4 w-[100%] bg-fixed fixed top-0 ">
@@ -46,11 +44,21 @@ class Index extends Component {
             </div>
           </div>
           <ul className="gap-5 md:hover:p-1 hidden md:flex ">
-            <li className="md:hover:bg-blue-400 ">HOME</li>
-            <li className="md:hover:bg-blue-400 ">ABOUT ME</li>
-            <li className="md:hover:bg-blue-400 ">PROJECTS</li>
-            <li className="md:hover:bg-blue-400 ">TESTIMONIALS</li>
-            <li className="md:hover:bg-blue-400 ">CONTACTS</li>
+            <li className="md:hover:bg-blue-400 ">
+              <a href="#">HOME</a>
+            </li>
+            <li className="md:hover:bg-blue-400 ">
+              4<a href="#about">ABOUT ME</a>
+            </li>
+            <li className="md:hover:bg-blue-400 ">
+              <a href="#projects">PROJECTS</a>
+            </li>
+            <li className="md:hover:bg-blue-400 ">
+              <a href="#testimonials">TESTIMONIALS</a>
+            </li>
+            <li className="md:hover:bg-blue-400 ">
+              <a href="#contact">CONTACTS</a>
+            </li>
           </ul>
 
           <button className="button p-0 li md:hidden leading-[8px] text-[20px] text-center grid place-content-center bg-inherit ">

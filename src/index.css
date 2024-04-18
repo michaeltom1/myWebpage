@@ -95,13 +95,27 @@ right: -400px;
  
 @media (prefers-color-scheme: light) {
   :root {
-    color: #ffff;
+    color: rgb(30, 41, 59);
     background-color: transparent;
   }
   a:hover {
     color: #747bff;
   }
-  button {
-    color: #333;
-  }
+
+  .sec2{
+    background: white;
+}
+ .header{
+    background: white;
+
+ }
+ button{
+  color: white;
+ }
+
+ .header{
+  background: rgb(255,255,255);
+background: linear-gradient(90deg, rgba(255,255,255,1) 9%, rgba(193,196,200,1) 50%, rgba(255,254,254,1) 100%);
+   }
+ 
 }

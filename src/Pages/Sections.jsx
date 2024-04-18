@@ -74,7 +74,7 @@ function Sections() {
             </p>
           </div>
 
-          <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-2 mb-2">
+          <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-2 mb-2 text-black dark:text-white">
             <img
               className="w-24 h-24 rounded-full"
               src={boy}
@@ -115,7 +115,7 @@ function Sections() {
               mic81070@gmail.com or connect with me on Facebook and WhatsApp
             </p>
           </div>
-          <div className="w-[100%] h-60 bg-slate-900 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 items-center md:w-1/2">
+          <div className="w-[100%] h-60 dark:bg-slate-900 bg-slate-100 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 items-center md:w-1/2">
             <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
               {/* <label >Name</label> */}
               <input

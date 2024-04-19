@@ -58,9 +58,15 @@ function Sections() {
               objectives, challenges, and solutions implemented
             </p>
           </div>
-          <div className="w-[100%] h-60 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 hover:bg-slate-600 place-content-center justify-center flex bg-slate-100 dark:bg-slate-900 p-2 text-black dark:text-white">
-            <img src={websitebg} alt="webpage sample" className="rounded-md"/>
-          </div>
+          <a href="https://michael-tom2.vercel.app/">
+            <div className="w-[100%] h-60 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 hover:bg-slate-600 place-content-center justify-center flex bg-slate-100 dark:bg-slate-900 p-2 text-black dark:text-white">
+              <img
+                src={websitebg}
+                alt="webpage sample"
+                className="rounded-md"
+              />
+            </div>
+          </a>
 
           <div className=" flex flex-col justify-center items-center">
             <div className=" justify-center flex bg-slate-100 rounded-xl dark:bg-slate-800 p-2 mb-2 text-black dark:text-white ">

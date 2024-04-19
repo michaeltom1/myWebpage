@@ -20,7 +20,6 @@
 a {
   font-weight: 500;
   text-decoration: inherit;
-  
 }
 a:hover {
   color: #535bf2;
@@ -32,28 +31,38 @@ body {
   min-width: 320px;
   min-height: 100vh;
   scroll-behavior: smooth;
+}
 
- }
+.header {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 20%,
+    rgba(2, 31, 69, 1) 60%,
+    rgba(2, 48, 86, 1) 89%,
+    rgba(18, 61, 92, 1) 100%
+  );
+}
 
- .header{
-  background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 20%, rgba(2,31,69,1) 60%, rgba(2,48,86,1) 89%, rgba(18,61,92,1) 100%);
-   }
-
-   .sec2{
-    background: rgb(0,0,0);
-background: linear-gradient(90deg, rgba(0,0,0,1) 53%, rgba(13,31,62,1) 83%);
+.sec2 {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 53%,
+    rgba(13, 31, 62, 1) 83%
+  );
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-img{
+img {
   width: 100%;
 }
 
-button, .btn {
+button,
+.btn {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -64,35 +73,32 @@ button, .btn {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-input{
+input {
   border: none;
   outline: none;
 }
 
-
-.btn-m{
+.btn-m {
   padding: 0.6em 1.3em;
-
 }
-#nav-side{
+#nav-side {
   height: 80vh;
-  width: 70%;
+  width: 60%;
   top: 60px;
   right: 0;
   padding-top: 40px;
   padding-left: 20px;
   position: absolute;
   gap: 1.25rem;
-  background: rgb(15, 23, 42 );
+  background: rgb(15, 23, 42);
   background: #110e33;
   transition: 0.3s ease-in-out;
   border-radius: 15px 15px 20px 20px;
 }
-#nav-side.active{
-right: -400px;
+#nav-side.active {
+  right: -400px;
 }
 
- 
 @media (prefers-color-scheme: light) {
   :root {
     color: rgb(30, 41, 59);
@@ -102,25 +108,28 @@ right: -400px;
     color: #747bff;
   }
 
-  .sec2{
+  .sec2 {
     background: white;
-}
- .header{
+  }
+  .header {
     background: white;
+  }
+  button {
+    color: white;
+  }
 
- }
- button{
-  color: white;
- }
+  .header {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 9%,
+      rgba(193, 196, 200, 1) 50%,
+      rgba(255, 254, 254, 1) 100%
+    );
+  }
 
- .header{
-  background: rgb(255,255,255);
-background: linear-gradient(90deg, rgba(255,255,255,1) 9%, rgba(193,196,200,1) 50%, rgba(255,254,254,1) 100%);
-   }
- 
-   #nav-side{
- color: #242424;
-  background: #ffffff;
-  
-}
+  #nav-side {
+    color: #242424;
+    background: #ffffff;
+  }
 }

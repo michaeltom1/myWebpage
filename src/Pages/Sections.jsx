@@ -3,6 +3,12 @@ import { MdWork } from "react-icons/md";
 
 
 import michael from "../assets/michael.png";
+import certificate from "../assets/FULL GIST CERTIFICATE2.jpg";
+import calender from "../assets/calender 2022.jpg";
+import bookcover from "../assets/XComputer Book cover.jpg";
+import avatar from "../assets/AvatarMaker (1).png";
+import websitebg from "../assets/webbg.png";
+
 import boy from "../assets/boy.jpg";
 // import woman from "../assets/woman(1).jpg";
 function Sections() {
@@ -37,9 +43,9 @@ function Sections() {
           </div>
         </div>
         {/* under const */}
-        <div className="px-5 sm:p-20 sec2">
+        <div className="px-5 sm:p-20 sec2 ">
           <h2 id="projects" className="text-center font-extrabold text-[2rem]">
-            <span className="material-symbols-outlined">work</span>
+            <span className="material-symbols-outlined mx-3">work</span>
             {/* <MdWork /> */}
             PROJECTS
           </h2>
@@ -52,103 +58,143 @@ function Sections() {
               objectives, challenges, and solutions implemented
             </p>
           </div>
-          <div className="w-[100%] h-60 bg-slate-900 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 hover:bg-slate-600">
-            <img src="" alt="" />
+          <div className="w-[100%] h-60 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 hover:bg-slate-600 place-content-center justify-center flex bg-slate-100 dark:bg-slate-900 p-2 text-black dark:text-white">
+            <img src={websitebg} alt="webpage sample" className="rounded-md"/>
+          </div>
+
+          <div className=" flex flex-col justify-center items-center">
+            <div className=" justify-center flex bg-slate-100 rounded-xl dark:bg-slate-800 p-2 mb-2 text-black dark:text-white ">
+              <img src={certificate} alt="certificate picture" className="" />
+            </div>
+            <div className=" justify-center flex bg-slate-100 rounded-xl dark:bg-slate-800 p-2 mb-2 text-black dark:text-white w-4/5">
+              <img src={bookcover} alt="bookcover" className="" />
+            </div>
+
+            <div className=" justify-center flex bg-slate-100 rounded-xl dark:bg-slate-800 p-2 mb-2 text-black dark:text-white w-4/5">
+              <img src={calender} alt="calender" className="" />
+            </div>
           </div>
 
           {/* under const2 */}
 
-          <h2
-            id="testimonials"
-            className="text-center font-extrabold text-[2rem]"
-          >
-            <span className="material-symbols-outlined mx-3">group</span>
-            TESTIMONIALS
-          </h2>
-          <hr className="border-[#38bdf8]" />
-          <div className="p-5 text-center items-center text-lg md:text-[22px]">
-            <p>
-              Hear what my clients have to say! Testimonials from satisfied
-              clients underscore my dedication, professionalism, and ability to
-              deliver exceptional results
-            </p>
-          </div>
-
-          <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-2 mb-2 text-black dark:text-white">
-            <img
-              className="w-24 h-24 rounded-full"
-              src={boy}
-              alt=""
-              width={384}
-              height={512}
-            />
-
-            <div className="pt-6 space-y-4">
-              <blockquote>
-                <p className="text-lg px-10 ">
-                  &quot;Michael pushes boundaries. His unconventional designs
-                  challenge norms and leave a lasting impression. His creativity
-                  knows no bounds, and our brand is forever transformed because
-                  of it.&quot;
-                </p>
-              </blockquote>
-              <figcaption className="pb-2 px-10">
-                <div>Eduok Tom</div>
-                <div>Web Developer</div>
-              </figcaption>
+          <div>
+            <h2
+              id="testimonials"
+              className="text-center font-extrabold text-[2rem]"
+            >
+              <span className="material-symbols-outlined mx-3">group</span>
+              TESTIMONIALS
+            </h2>
+            <hr className="border-[#38bdf8]" />
+            <div className="p-5 text-center items-center text-lg md:text-[22px]">
+              <p>
+                Hear what my clients have to say! Testimonials from satisfied
+                clients underscore my dedication, professionalism, and ability
+                to deliver exceptional results
+              </p>
             </div>
-          </figure>
+
+            <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-2 mb-2 text-black dark:text-white">
+              <img
+                className="w-24 h-24 rounded-full"
+                src={boy}
+                alt=""
+                width={384}
+                height={512}
+              />
+
+              <div className="pt-6 space-y-4">
+                <blockquote>
+                  <p className="text-lg px-10 ">
+                    &quot;Michael pushes boundaries. His unconventional designs
+                    challenge norms and leave a lasting impression. His
+                    creativity knows no bounds, and our brand is forever
+                    transformed because of it.&quot;
+                  </p>
+                </blockquote>
+                <figcaption className="pb-2 px-10">
+                  <div>Eduok Tom</div>
+                  <div>Web Developer</div>
+                </figcaption>
+              </div>
+            </figure>
+            <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-2 mb-2 text-black dark:text-white mt-5">
+              <img
+                className="w-24 h-24 rounded-full"
+                src={avatar}
+                alt=""
+                width={384}
+                height={512}
+              />
+
+              <div className="pt-6 space-y-4">
+                <blockquote>
+                  <p className="text-lg px-10 ">
+                    &quot;Michael&#39;s attention to detail is awe-inspiring.
+                    His pixel-perfect designs elevate our user experience.
+                    Whether it&#39;s a mobile app or a website, He crafts
+                    interfaces that users love to explore.&quot;
+                  </p>
+                </blockquote>
+                <figcaption className="pb-2 px-10">
+                  <div>Sam Jeff</div>
+                  <div>Graphic Designer</div>
+                </figcaption>
+              </div>
+            </figure>
+          </div>
 
           {/* under const 3 */}
+          <div className="pb-8">
+            <h2
+              id="contact"
+              className="text-center font-extrabold text-[2rem] border-[#38bdf8]"
+            >
+              <span className="material-symbols-outlined  mx-2">call</span>
+              CONTACT ME
+            </h2>
+            <hr className="border-[#38bdf8]" />
+            <div className="p-5 text-center items-center text-lg md:text-[22px]">
+              <p>
+                Ready to start a project together? Reach out to me via email at
+                mic81070@gmail.com or connect with me on Facebook and WhatsApp
+              </p>
+            </div>
+            <div className="w-[100%] h-60 dark:bg-slate-900 bg-slate-100 rounded-md border border-slate-500/100 hover:border-slate-400 items-center md:w-1/2 ">
+              <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2 ">
+                {/* <label >Name</label> */}
+                <input
+                  type="email"
+                  placeholder="Name"
+                  required
+                  className="bg-transparent "
+                />
+                <MdOutlineDriveFileRenameOutline />
+              </div>
 
-          <h2
-            id="contact"
-            className="text-center font-extrabold text-[2rem] border-[#38bdf8]"
-          >
-            <span className="material-symbols-outlined  mx-2">call</span>
-            CONTACT ME
-          </h2>
-          <hr className="border-[#38bdf8]" />
-          <div className="p-5 text-center items-center text-lg md:text-[22px]">
-            <p>
-              Ready to start a project together? Reach out to me via email at
-              mic81070@gmail.com or connect with me on Facebook and WhatsApp
-            </p>
-          </div>
-          <div className="w-[100%] h-60 dark:bg-slate-900 bg-slate-100 rounded-md mb-5 border border-slate-500/100 hover:border-slate-400 items-center md:w-1/2">
-            <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
-              {/* <label >Name</label> */}
-              <input
-                type="email"
-                placeholder="Name"
-                required
-                className="bg-transparent "
-              />
-              <MdOutlineDriveFileRenameOutline />
-            </div>
-
-            <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
-              {/* <label >Email</label> */}
-              <input
-                type="email"
-                placeholder="Email"
-                required
-                className="bg-transparent "
-              />
-              <span className="material-symbols-outlined">mail</span>
-            </div>
-            <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
-              {/* <label >Message</label> */}
-              <input
-                type="email"
-                placeholder="Message"
-                required
-                className="bg-transparent "
-              />
-              <span className="material-symbols-outlined">mode_comment</span>
-            </div>
-            <div className=" items-center m-4 pb-2 flex  gap-2 justify-between pr-2">
-              <button className="w-[100%]"> Submit</button>
+              <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
+                {/* <label >Email</label> */}
+                <input
+                  type="email"
+                  placeholder="Email"
+                  required
+                  className="bg-transparent "
+                />
+                <span className="material-symbols-outlined">mail</span>
+              </div>
+              <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
+                {/* <label >Message</label> */}
+                <input
+                  type="email"
+                  placeholder="Message"
+                  required
+                  className="bg-transparent "
+                />
+                <span className="material-symbols-outlined">mode_comment</span>
+              </div>
+              <div className=" items-center m-4 pb-2 flex  gap-2 justify-between pr-2">
+                <button className="w-[100%]"> Submit</button>
+              </div>
             </div>
           </div>
         </div>

@@ -44,6 +44,8 @@ class Index extends Component {
               </ul>
             </div>
           </div>
+
+          {/* big */}
           <ul className="gap-5 md:hover:p-1 hidden md:flex ">
             <li className="md:hover:bg-blue-400 ">
               <a href="#">HOME</a>

@@ -7,18 +7,19 @@ class Index extends Component {
     this.setState({ clicked: !this.state.clicked });
   };
 
+  // {alert("Hello there");}
   render() {
     return (
       <>
-        <nav className="flex items-center  bg-[#041644] p-2 justify-between shadow-sm px-4 w-[100%] bg-fixed fixed top-0 ">
+        <nav className="flex items-center  bg-[#041644] p-2 justify-between shadow-sm px-4 sm:px-16 w-[100%] bg-fixed fixed top-0 ">
           <div>
             <button className="p-[0.6em]">
-              <a href="#">Michael</a>
+              <a href="#" >Michael</a>
             </button>
           </div>
 
           <div>
-            <div className="md:hidden">
+            <div className="">
               <ul
                 id="nav-side"
                 className={
@@ -46,7 +47,7 @@ class Index extends Component {
           </div>
 
           {/* big */}
-          <ul className="gap-5 md:hover:p-1 hidden md:flex ">
+          <ul className="gap-5 md:hover:p-1 hidden lg:flex ">
             <li className="md:hover:bg-blue-400 ">
               <a href="#">HOME</a>
             </li>
@@ -69,7 +70,7 @@ class Index extends Component {
             {/* <span className="material-symbols-outlined">more_vert</span> */}
             {/* <span className="material-symbols-outlined">close</span> */}
           </button>
-          <button className="button p-0 li md:hidden leading-[8px] text-[20px] text-center grid place-content-center bg-inherit ">
+          <button className="button p-0 li lg:hidden leading-[8px] text-[20px] text-center grid place-content-center bg-inherit ">
             <div id="mobile" onClick={this.handelClick}>
               <i
                 id="bar"

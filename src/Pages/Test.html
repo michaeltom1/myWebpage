@@ -39,3 +39,18 @@
           >
             Download Resume
           </a> -->
+
+
+          import React from 'react';
+
+function AlertButton() {
+  const showMessage = () => {
+    alert("Hello there!");
+  };
+
+  return (
+    <button onClick={showMessage}>Click Me</button>
+  );
+}
+
+export default AlertButton;

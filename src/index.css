@@ -9,7 +9,9 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #16162b;
+
+  scroll-behavior: smooth;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -27,7 +29,6 @@ a:hover {
 
 body {
   margin: 0;
-  /* display: flex; */
   min-width: 320px;
   min-height: 100vh;
   scroll-behavior: smooth;
@@ -44,13 +45,18 @@ body {
   );
 }
 
-.sec2 {
+/* .sec2 {
   background: rgb(0, 0, 0);
   background: linear-gradient(
     90deg,
     rgba(0, 0, 0, 1) 53%,
     rgba(13, 31, 62, 1) 83%
   );
+   */
+  
+
+
+.aboutUs{
 }
 
 h1 {
@@ -96,7 +102,8 @@ input {
   border-radius: 15px 15px 20px 20px;
 }
 #nav-side.active {
-  right: -400px;
+  right: -900px;
+  /* display: none; */
 }
 
 @media (prefers-color-scheme: light) {

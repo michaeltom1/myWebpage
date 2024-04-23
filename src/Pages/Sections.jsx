@@ -220,7 +220,7 @@ function Sections() {
                       our branding to new heights with elegant logos,
                       captivating visuals, and cohesive color schemes. His
                       ability to convey our brand story through graphics is
-                      unmatched.xsqw
+                      unmatched.
                     </p>
                   </blockquote>
                   <figcaption className="pb-2 px-10">

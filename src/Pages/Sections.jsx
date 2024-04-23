@@ -138,9 +138,9 @@ function Sections() {
 
           {/* under const2 */}
 
-          <div>
+          <div id="testimonials">
             <h2
-              id="testimonials"
+              // id="testimonials"
               className="text-center font-extrabold text-[2rem]"
             >
               <span className="material-symbols-outlined mx-3">group</span>

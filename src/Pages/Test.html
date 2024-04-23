@@ -1,56 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download File</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Navbar</title>
+<style>
+  /* Your CSS for navbar styling */
+</style>
 </head>
 <body>
-    <!-- Download Link -->
-    <a href="../assets/Resume.pdf" download="Resume.pdf" class="download-button">
-        Download PDF
-    </a>
 
-    <!-- Optional: Adding some basic styling -->
-    <style>
-        .download-button {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 10px 0;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+<nav class="navbar">
+  <button class="navbar-toggle" onclick="toggleNavbar()">Toggle</button>
+  <ul class="navbar-menu">
+    <li><a href="page1.html">Page 1</a></li>
+    <li><a href="page2.html">Page 2</a></li>
+    <li><a href="page3.html">Page 3</a></li>
+    <!-- Add more menu items as needed -->
+  </ul>
+</nav>
 
-        .download-button:hover {
-            background-color: #0056b3;
-        }
-    </style>
+<script>
+function toggleNavbar() {
+  var navbarMenu = document.querySelector('.navbar-menu');
+  navbarMenu.classList.toggle('active');
+}
+</script>
+
 </body>
 </html>
-
-
-<!--    <a
-            href={Resume}
-            download="Michael_Resume.pdf"
-            className="btn text-center bg-[#38bdf8] mt-5"
-          >
-            Download Resume
-          </a> -->
-
-
-          import React from 'react';
-
-function AlertButton() {
-  const showMessage = () => {
-    alert("Hello there!");
-  };
-
-  return (
-    <button onClick={showMessage}>Click Me</button>
-  );
-}
-
-export default AlertButton;

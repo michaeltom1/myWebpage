@@ -1,5 +1,10 @@
 import { Component } from "react";
 
+const hello = () => {
+  alert("Hello there")
+  const greet = "Hello There";
+  
+}
 
 class Index extends Component {
   state = { clicked: false };
@@ -7,14 +12,21 @@ class Index extends Component {
     this.setState({ clicked: !this.state.clicked });
   };
 
-  // {alert("Hello there");}
+   document.onclick = function (e) {
+      if (!menu_icon_box.contains(e.target) && !box.contains(e.target)) {
+        menu_icon_box.classList.remove("active");
+        box.classList.remove("active");
+      }
+    };
+
+  
   render() {
     return (
       <>
         <nav className="flex items-center  bg-[#041644] p-2 justify-between shadow-sm px-4 sm:px-16 w-[100%] bg-fixed fixed top-0 ">
           <div>
-            <button className="p-[0.6em]">
-              <a href="#" >Michael</a>
+            <button className="p-[0.6em]" onClick={hello}>
+              <a href="#">Michael</a>
             </button>
           </div>
 
@@ -24,8 +36,9 @@ class Index extends Component {
                 id="nav-side"
                 className={
                   this.state.clicked ? "#nav-side " : "nav-side active"
+     
                 }
-                // className="active gap-5 md:hover:p-1 bg-slate-900 absolute right-0 top-[60px] w-[50%] h-[100vh] pt-[40px] pl-[10px] shadow-md"
+                
               >
                 <li className="mb-[25px]">
                   <a href="#">HOME</a>
@@ -65,11 +78,7 @@ class Index extends Component {
             </li>
           </ul>
 
-          <button className="button p-0 li md:hidden leading-[8px] text-[20px] text-center grid place-content-center bg-inherit ">
-            {/* <span className="material-symbols-outlined">menu</span> */}
-            {/* <span className="material-symbols-outlined">more_vert</span> */}
-            {/* <span className="material-symbols-outlined">close</span> */}
-          </button>
+          <button className="button p-0 li md:hidden leading-[8px] text-[20px] text-center grid place-content-center bg-inherit "></button>
           <button className="button p-0 li lg:hidden leading-[8px] text-[20px] text-center grid place-content-center bg-inherit ">
             <div id="mobile" onClick={this.handelClick}>
               <i

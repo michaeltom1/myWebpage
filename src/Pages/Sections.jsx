@@ -22,10 +22,11 @@ function Sections() {
   return (
     <>
       <div className="sec2 ">
-        <div className="header h-[80vh] md:h-[70vh]  sm:px-10 sm:py-10">
-          <h2 id="about" className="text-center font-extrabold text-[2rem]">
-            ABOUT ME
-          </h2>
+        <section
+          id="about"
+          className="header h-[80vh] md:h-[70vh]  sm:px-10 sm:py-10 md:pt-16"
+        >
+          <h2 className="text-center font-extrabold text-[2rem]">ABOUT ME</h2>
           <div className="px-10">
             <hr className="border-[#38bdf8] " />
           </div>
@@ -50,10 +51,13 @@ function Sections() {
               </figure>
             </div>
           </div>
-        </div>
+        </section>
         {/* under const */}
-        <div className="px-5 sm:px-20 sm:py-10 sec2  ">
-          <h2 id="projects" className="text-center font-extrabold text-[2rem]">
+        <section
+          id="projects"
+          className="px-5 sm:px-20 sm:py-10 sec2  md:pt-16"
+        >
+          <h2 className="text-center font-extrabold text-[2rem]">
             <span className="material-symbols-outlined mx-3">work</span>
             {/* <MdWork /> */}
             PROJECTS
@@ -138,11 +142,8 @@ function Sections() {
 
           {/* under const2 */}
 
-          <div id="testimonials">
-            <h2
-              // id="testimonials"
-              className="text-center font-extrabold text-[2rem]"
-            >
+          <section id="testimonials">
+            <h2 className="text-center font-extrabold text-[2rem]">
               <span className="material-symbols-outlined mx-3">group</span>
               TESTIMONIALS
             </h2>
@@ -230,12 +231,12 @@ function Sections() {
                 </div>
               </figure>
             </div>
-          </div>
+          </section>
 
           {/* under const 3 */}
-          <div className="pb-8">
+          <section id="contact" className="pb-8">
             <h2
-              id="contact"
+              // id="contact"
               className="text-center font-extrabold text-[2rem] border-[#38bdf8]"
             >
               <span className="material-symbols-outlined  mx-2">call</span>
@@ -284,8 +285,8 @@ function Sections() {
                 <button className="w-[100%]"> Submit</button>
               </div>
             </div>
-          </div>
-        </div>
+          </section>
+        </section>
       </div>
     </>
   );

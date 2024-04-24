@@ -3,6 +3,7 @@ function Header() {
   return (
     <>
       <header className="header px-[20px]">
+        <div className="hello">Hello There</div>
         <div className="  mt-12 rounded-lg p-2 h-[60vh] place-content-center grid md:h-[100vh]">
           <h1 className=" text-slate-800 md:text-[5rem] font-extrabold text-center sm:text-5xl text-6xl dark:text-white">
             HI, I AM <br />

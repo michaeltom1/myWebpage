@@ -106,6 +106,28 @@ input {
   /* display: none; */
 }
 
+.hello{
+  display: none;
+  position: absolute;
+  width: 10rem;
+  background: #fff;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 10px;
+  color: #110e33;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  position: fixed;
+  
+  display: none;
+}
+
+section {
+        padding-top: 60px; 
+        /* height: 100vh; */
+      }
+
 @media (prefers-color-scheme: light) {
   :root {
     color: rgb(30, 41, 59);

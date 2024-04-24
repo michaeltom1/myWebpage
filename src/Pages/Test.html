@@ -1,31 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Responsive Navbar</title>
-<style>
-  /* Your CSS for navbar styling */
-</style>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Display on Click</title>
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+      .element {
+        opacity: 0;
+        /* Define your desired styles */
+        width: 200px;
+        height: 100px;
+        background-color: lightblue;
+        text-align: center;
+        line-height: 100px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transition: opacity 0.5s ease; /* Smooth transition for opacity */
+        transform: translate(-50%, -50%);
+        animation: fadeInOut 1s ease; /* Animation for fade-in and fade-out */
+      }
 
-<nav class="navbar">
-  <button class="navbar-toggle" onclick="toggleNavbar()">Toggle</button>
-  <ul class="navbar-menu">
-    <li><a href="page1.html">Page 1</a></li>
-    <li><a href="page2.html">Page 2</a></li>
-    <li><a href="page3.html">Page 3</a></li>
-    <!-- Add more menu items as needed -->
-  </ul>
-</nav>
+      .element.show {
+        opacity: 1;
+        /* Add any additional styles for when the element is displayed */
+      }
 
-<script>
-function toggleNavbar() {
-  var navbarMenu = document.querySelector('.navbar-menu');
-  navbarMenu.classList.toggle('active');
-}
-</script>
+      @keyframes fadeInOut {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="element" id="displayElement">Hello, I'm briefly displayed!</div>
+    <button id="displayButton">Click me!</button>
 
-</body>
+    <script>
+      document
+        .getElementById("displayButton")
+        .addEventListener("click", function () {
+          var element = document.getElementById("displayElement");
+          element.classList.add("show");
+          setTimeout(function () {
+            element.classList.remove("show");
+          }, 1000); // Adjust the duration as needed (in milliseconds)
+        });
+    </script>
+  </body>
 </html>

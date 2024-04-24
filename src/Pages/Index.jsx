@@ -1,19 +1,22 @@
 import { Component } from "react";
 
 const hello = () => {
-  alert("Hello there")
+  alert("Hello there");
   const greet = "Hello There";
+  return greet;
   
 }
+ 
+
 
 class Index extends Component {
   state = { clicked: false };
   handelClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
-
-
   
+  
+
   render() {
     return (
       <>
@@ -24,17 +27,18 @@ class Index extends Component {
             </button>
           </div>
 
+
           <div>
             <div className="">
               <ul
                 id="nav-side"
+              
                 className={
                   this.state.clicked ? "#nav-side " : "nav-side active"
-     
+                  
                 }
-                
               >
-                <li className="mb-[25px]">
+                <li className="mb-[25px] home-active">
                   <a href="#">HOME</a>
                 </li>
                 <li className="mb-[25px]">

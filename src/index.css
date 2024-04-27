@@ -22,6 +22,16 @@
 a {
   font-weight: 500;
   text-decoration: inherit;
+  
+}
+
+test{
+  position: relative;
+  position: fixed;
+  position: static;
+  position: sticky;
+  position: absolute;
+  position: ;
 }
 
 
@@ -31,6 +41,7 @@ body {
   min-height: 100vh;
   scroll-behavior: smooth;
 }
+
 
 .header {
   background: rgb(2, 0, 36);
@@ -130,7 +141,11 @@ section {
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
 }
 .navbar {
+  transition: all 0.5s;
+}
+.navbar.active {
   transition: all 1.5s;
+  background: #041644;
 }
 
 .fadeInTop {

@@ -1,17 +1,12 @@
 import { useState } from "react";
 
-
 function Nav() {
-
   const [clicked, setClicked] = useState(false);
   const [navbar, setNavbar] = useState(false);
 
-
-
- 
- const handleClick = () => {
-   setClicked(!clicked);
- };
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
 
   const changeNavbarBg = () => {
     // console.log(scrollY)
@@ -21,7 +16,7 @@ function Nav() {
       setNavbar(false);
     }
   };
-  window.addEventListener('scroll', changeNavbarBg)
+  window.addEventListener("scroll", changeNavbarBg);
   return (
     <>
       <div>
@@ -37,7 +32,7 @@ function Nav() {
           </div>
           <div>
             <ul
-              className={`md:relative md:gap-5 md:m-0 md:bg-transparent0 md:flex-row md:p-0 md:py-0 md:h-0 md:w-full md:items-center md:right-0 dark:bg-slate-900 bg-slate-200 h-[30rem] absolute rounded-xl p-5 flex flex-col gap-5  top-0 w-1/2 pt-10 -right-full m-2  ${
+              className={`md:relative md:gap-5 md:m-0 md:bg-transparent0 md:flex-row md:p-0 md:py-0 md:h-0 md:w-full md:items-center md:right-0 dark:bg-slate-900 bg-slate-200 h-[30rem] absolute rounded-xl p-5 flex flex-col gap-5  top-0 w-4/5 pt-10 -right-full m-2  ${
                 clicked ? "sideNav" : "nav-side"
               }`}
               onClick={handleClick}

@@ -1,42 +1,37 @@
+
+import { ToastContainer, toast } from "react-toastify";
 import { Component } from "react";
+import "react-toastify/dist/ReactToastify.css";
 
-const hello = () => {
-  alert("Hello there");
-  const greet = "Hello There";
-  return greet;
-  
-}
- 
+const notify = () => toast("Hi there!");
 
-
-class Index extends Component {
+class Nav extends Component {
   state = { clicked: false };
   handelClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
-  
-  
 
   render() {
     return (
       <>
-        <nav className="flex items-center  bg-[#041644] p-2 justify-between shadow-sm px-4 sm:px-16 w-[100%] bg-fixed fixed top-0 ">
+        <nav
+          className={`navbar flex items-center p-2 justify-between px-4 sm:px-16 w-[100%] bg-fixed fixed z-10 top-0 bg-[041644]`}
+        >
           <div>
-            <button className="p-[0.6em]" onClick={hello}>
+            <button className="p-[0.6em]" onClick={notify}>
               <a href="#">Michael</a>
             </button>
+            <ToastContainer />
           </div>
 
-
+          {/* small */}
           <div>
-            <div className="">
+            <div className="opacity-1">
               <ul
                 id="nav-side"
-              
-                className={
+                className={`${
                   this.state.clicked ? "#nav-side " : "nav-side active"
-                  
-                }
+                }  `}
               >
                 <li className="mb-[25px] home-active">
                   <a href="#">HOME</a>
@@ -58,20 +53,22 @@ class Index extends Component {
           </div>
 
           {/* big */}
-          <ul className="gap-5 md:hover:p-1 hidden lg:flex ">
-            <li className="md:hover:bg-blue-400 ">
-              <a href="#">HOME</a>
+          <ul className="ulbig gap-5 md:hover:p-1 hidden lg:flex ">
+            <li>
+              <a href="#" className="md:hover:text-[#38bdf8] ">
+                HOME
+              </a>
             </li>
-            <li className="md:hover:bg-blue-400 ">
+            <li className="md:hover:text-[#38bdf8] ">
               <a href="#about">ABOUT ME</a>
             </li>
-            <li className="md:hover:bg-blue-400 ">
+            <li className="md:hover:text-[#38bdf8] ">
               <a href="#projects">PROJECTS</a>
             </li>
-            <li className="md:hover:bg-blue-400 ">
+            <li className="md:hover:text-[#38bdf8] ">
               <a href="#testimonials">TESTIMONIALS</a>
             </li>
-            <li className="md:hover:bg-blue-400 ">
+            <li className="md:hover:text-[#38bdf8] ">
               <a href="#contact">CONTACTS</a>
             </li>
           </ul>
@@ -91,4 +88,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default Nav;

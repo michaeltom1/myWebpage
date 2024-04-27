@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+     
+      nav {
+        color: #fff;
+        position: fixed;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem;
+        width: 100%;
+      }
+      .navbar {
+        transition: all 1.5s;
+      }
+      .nav-scroll {
+        background: #000;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+      }
+      nav,
+      ul,
+      a {
+        display: flex;
+        gap: 2rem;
+        text-decoration: none;
+        list-style: none;
+        color: #fff;
+      }
+      section {
+        padding-top: 4rem;
+      }
+      img {
+        width: 100%;
+      }
+      .bg-image {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        /* filter: brightness(0.6); */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <img src="../assets/netflix-screenshot.png" alt="" class="bg-image" /> -->
+    <nav class="navbar">
+      <div class="logo">Hello World</div>
+      <div>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">projects</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div style="background-color: teal; height: 100vh; padding-top: 10rem">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore,
+      assumenda asperiores quibusdam nihil quo debitis quidem aliquam deleniti
+      earum, dignissimos non facere quia totam unde molestiae quaerat vel,
+      tempora officiis.
+    </div>
+    <div style="background-color: aqua; height: 100vh; padding-top: 10rem">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore,
+      assumenda asperiores quibusdam nihil quo debitis quidem aliquam deleniti
+      earum, dignissimos non facere quia totam unde molestiae quaerat vel,
+      tempora officiis.
+    </div>
+
+    <script>
+      const navEl = document.querySelector(".navbar");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY >= 56) {
+          navEl.classList.add("nav-scroll");
+        } else if (window.scrollY < 56) {
+          navEl.classList.remove("nav-scroll");
+        }
+      });
+    </script>
+  </body>
+</html>
+
+
+
+<!-- 
+  window.addEventListener("scroll", function () {
+  let navbar = document.querySelector(".navbar");
+  if (window.scrollY > 50) {
+    navbar.classList.add("opaque");
+  } else {
+    navbar.classList.remove("opaque");
+  }
+});
+ -->

@@ -23,9 +23,7 @@ a {
   font-weight: 500;
   text-decoration: inherit;
 }
-a:hover {
-  color: #535bf2;
-}
+
 
 body {
   margin: 0;
@@ -45,20 +43,10 @@ body {
   );
 }
 
-/* .sec2 {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 53%,
-    rgba(13, 31, 62, 1) 83%
-  );
-   */
-  
-
-
-.aboutUs{
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
 }
-
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
@@ -87,6 +75,11 @@ input {
 .btn-m {
   padding: 0.6em 1.3em;
 }
+
+
+
+
+
 #nav-side {
   height: 80vh;
   width: 60%;
@@ -106,7 +99,12 @@ input {
   /* display: none; */
 }
 
-.hello{
+
+.sideNav{
+  right: 0;
+}
+
+.hello {
   display: none;
   position: absolute;
   width: 10rem;
@@ -119,14 +117,69 @@ input {
   font-weight: bolder;
   text-align: center;
   position: fixed;
-  
+
   display: none;
 }
 
 section {
-        padding-top: 60px; 
-        /* height: 100vh; */
-      }
+  padding-top: 60px;
+  /* height: 100vh; */
+}
+.nav-scroll {
+  background: #041644;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+.navbar {
+  transition: all 1.5s;
+}
+
+.fadeInTop {
+  -webkit-animation: fadeInTop 2s both;
+  -moz-animation: fadeInTop 2s both;
+  -o-animation: fadeInTop 2s both;
+  animation: fadeInTop 2s both;
+}
+
+@-webkit-keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -162,3 +215,6 @@ section {
     background: #ffffff;
   }
 }
+
+
+ 

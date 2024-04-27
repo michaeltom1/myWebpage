@@ -4,13 +4,18 @@ function Header() {
     <>
       <header className="header px-[20px]">
         <div className="hello">Hello There</div>
-        <div className="  mt-12 rounded-lg p-2 h-[60vh] place-content-center grid md:h-[100vh]">
-          <h1 className=" text-slate-800 md:text-[5rem] font-extrabold text-center sm:text-5xl text-6xl dark:text-white">
+        <div className="fadeInTop  pt-12 rounded-lg p-2 h-[60vh] place-content-center grid md:h-[100vh]">
+          <h1
+            className={` text-slate-800 md:text-[5rem] font-extrabold text-center sm:text-5xl text-6xl dark:text-white`}
+          >
             HI, I AM <br />
             MICHAEL <br />
             TOM.
           </h1>
-          <h3 className="text-center text-[1rem] mt-10 font-bold md:text-[2rem]">
+          <h3
+            className="text-center text-[1rem] mt-10 font-bold md:text-[2rem]"
+            onClick={alert}
+          >
             GRAPHIC DESIGNER AND WEB DEVELOPER
           </h3>
 

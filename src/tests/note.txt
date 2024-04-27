@@ -1,0 +1,38 @@
+import { useState } from "react";
+
+
+ const [name, setName] = useState("Michael");
+
+  const namechange = () => {
+    setName("Max");
+  };
+
+
+  {name}
+
+
+  
+          <button onClick={namechange}>changename</button>
+
+
+
+
+
+          
+  state = { clicked: false };
+  handelClick = () => {
+    this.setState({ clicked: !this.state.clicked });
+  };
+
+
+// 53 className={
+                  this.state.clicked ? "#nav-side " : "nav-side active"
+                }
+
+
+// 95 className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
+
+ <i
+                id="bar"
+                className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
+              ></i>

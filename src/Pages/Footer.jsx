@@ -3,7 +3,7 @@
 function Footer() {
   return (
     <>
-      <footer className="bg-[#080c16] py-5 ">
+      <footer className="dark:bg-[#080c16] py-5 ">
         <div>
           <a href="#">
             <h2 className="text-center font-bold text-[1rem] text-slate-600 hover:text-[#38bdf8]">

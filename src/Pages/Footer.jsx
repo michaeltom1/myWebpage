@@ -3,7 +3,7 @@
 function Footer() {
   return (
     <>
-      <footer className="dark:bg-[#080c16] py-5 ">
+      <footer className="dark:bg-[#080c16] py-5 relative">
         <div>
           <a href="#">
             <h2 className="text-center font-bold text-[1rem] text-slate-600 hover:text-[#38bdf8]">
@@ -15,6 +15,11 @@ function Footer() {
             © Copyright Michael Tom. Design And Developed By Michael
           </p>
         </div>
+        <a href="#">
+          <button className="absolute bottom-2 m-1 p-1 bg-inherit rounded-sm font-extrabold text-lg md:bg-[#0014c7] md:p-3 right-5">
+            &#x2191;
+          </button>
+        </a>
       </footer>
     </>
   );

@@ -1,7 +1,11 @@
-import { MdOutlineDriveFileRenameOutline } from "react-icons/md";
+import {
+  MdCall,
+  MdGroup,
+  MdMail,
+  MdOutlineDriveFileRenameOutline,
+} from "react-icons/md";
 import { MdWork } from "react-icons/md";
 
-import michael from "../assets/michael.png";
 import certificate from "../assets/FULL GIST CERTIFICATE2.jpg";
 import calender from "../assets/calender 2022.jpg";
 import bookcover from "../assets/XComputer Book cover.jpg";
@@ -17,41 +21,20 @@ import codeZone from "../assets/codeZone.jpg";
 import codeMark from "../assets/card mark smith.jpg";
 
 import boy from "../assets/boy.jpg";
-// import woman from "../assets/woman(1).jpg";
+import About from "../Components/About";
+import Services from "../Components/Services";
+import { BiMessage } from "react-icons/bi";
+
+// import Testimonials from "../Components/Testimonials"
+import { FiMessageSquare } from "react-icons/fi";
+import { MdOutlineMail } from "react-icons/md";
+
 function Sections() {
   return (
     <>
-      <div className="sec2 ">
-        <section
-          id="about"
-          className="header h-[80vh] md:h-[70vh]  sm:px-10 sm:py-10 md:pt-16"
-        >
-          <h2 className="text-center font-extrabold text-[2rem]">ABOUT ME</h2>
-          <div className="px-10">
-            <hr className="border-[#38bdf8] " />
-          </div>
-          <div className="aboutUs  md:flex md:flex-row-reverse md:gap-10 md:mt-5 md:mx-20 md:justify-center md:bg-slae-400">
-            <div className="p-5 text-lg text-center items-center md:w-[100%] md:text-left md:text-[22px]">
-              <p>
-                Greetings! I&apos;m Michael Tom, a passionate web developer and
-                graphic designer with over a year of experience in crafting
-                visually appealing websites and stunning graphic designs. My
-                portfolio showcases my journey and expertise in these fields
-              </p>
-            </div>
-            <div>
-              <figure className="rounded-xl dark:bg-slate-transparent p-2 mb-10 text-black dark:text-white flex place-content-center md:bg-slate-500 md:w-full">
-                <img
-                  className="w-3/5 rounded-full bg-slate-900 md:rounded-none md:w-full"
-                  src={michael}
-                  alt=""
-                  width={384}
-                  height={512}
-                />
-              </figure>
-            </div>
-          </div>
-        </section>
+      <div className="sec2 bg-red-500-">
+        <About />
+        <Services />
         {/* under const */}
         <section
           id="projects"
@@ -142,11 +125,17 @@ function Sections() {
 
           {/* under const2 */}
 
+          {/* <Testimonials/> */}
+
           <section id="testimonials">
-            <h2 className="text-center font-extrabold text-[2rem]">
-              <span className="material-symbols-outlined mx-3">group</span>
-              TESTIMONIALS
-            </h2>
+            <div className="flex place-content-center items-center">
+              <span className="text-[2rem] font-bold text-3xl px-4">
+                <MdGroup />
+              </span>
+              <h2 className="text-center font-extrabold text-[2rem]">
+                TESTIMONIALS
+              </h2>
+            </div>
             <hr className="border-[#38bdf8]" />
             <div className="p-5 text-center items-center text-lg md:text-[22px]">
               <p>
@@ -157,15 +146,23 @@ function Sections() {
             </div>
 
             <div className="lg:grid lg:grid-cols-3 gap-5 sm:block">
-              <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-2 mb-2 text-black dark:text-white transition-all">
-                <img
-                  className="w-24 h-24 rounded-full"
-                  src={boy}
-                  alt=""
-                  width={384}
-                  height={512}
-                />
+              <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-5 mb-2 text-black dark:text-white transition-all">
+                <div className="flex items-center">
+                  <img
+                    className="w-24 h-24 rounded-full"
+                    src={boy}
+                    alt=""
+                    width={384}
+                    height={512}
+                  />
 
+                  <figcaption className="px-5">
+                    <div>
+                      <b>Eduok Tom</b>
+                    </div>
+                    <div>Web Developer</div>
+                  </figcaption>
+                </div>
                 <div className="pt-6 space-y-4">
                   <blockquote>
                     <p className="text-lg px-10 ">
@@ -175,20 +172,24 @@ function Sections() {
                       transformed because of it.&quot;
                     </p>
                   </blockquote>
-                  <figcaption className="pb-2 px-10">
-                    <div>Eduok Tom</div>
-                    <div>Web Developer</div>
-                  </figcaption>
                 </div>
               </figure>
-              <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-2 mb-2 text-black dark:text-white">
-                <img
-                  className="w-24 h-24 rounded-full"
-                  src={avatar}
-                  alt=""
-                  width={384}
-                  height={512}
-                />
+              <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-5 mb-2 text-black dark:text-white">
+                <div className="flex items-center">
+                  <img
+                    className="w-24 h-24 rounded-full"
+                    src={avatar}
+                    alt=""
+                    width={384}
+                    height={512}
+                  />
+                  <figcaption className="px-5">
+                    <div>
+                      <b>Sam Jeff</b>
+                    </div>
+                    <div>Graphic Designer</div>
+                  </figcaption>
+                </div>
 
                 <div className="pt-6 space-y-4">
                   <blockquote>
@@ -199,20 +200,25 @@ function Sections() {
                       interfaces that users love to explore.&quot;
                     </p>
                   </blockquote>
-                  <figcaption className="pb-2 px-10">
-                    <div>Sam Jeff</div>
-                    <div>Graphic Designer</div>
-                  </figcaption>
                 </div>
               </figure>
-              <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-2 mb-2 text-black dark:text-white">
-                <img
-                  className="w-24 h-24 rounded-full"
-                  src={woman}
-                  alt=""
-                  width={384}
-                  height={512}
-                />
+              <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-5 mb-2 text-black dark:text-white">
+                <div className="flex items-center">
+                  <img
+                    className="w-24 h-24 rounded-full"
+                    src={woman}
+                    alt=""
+                    width={384}
+                    height={512}
+                  />
+                  {/* pb-2 px-10 */}
+                  <figcaption className="px-5">
+                    <div>
+                      <b>Zap cooperation</b>
+                    </div>
+                    <div></div>
+                  </figcaption>
+                </div>
 
                 <div className="pt-6 space-y-4">
                   <blockquote>
@@ -224,10 +230,6 @@ function Sections() {
                       unmatched.
                     </p>
                   </blockquote>
-                  <figcaption className="pb-2 px-10">
-                    <div>Zap cooperation</div>
-                    <div></div>
-                  </figcaption>
                 </div>
               </figure>
             </div>
@@ -235,25 +237,25 @@ function Sections() {
 
           {/* under const 3 */}
           <section id="contact" className="pb-8">
-            <h2
-              // id="contact"
-              className="text-center font-extrabold text-[2rem] border-[#38bdf8]"
-            >
-              <span className="material-symbols-outlined  mx-2">call</span>
-              CONTACT ME
-            </h2>
+            <div className="flex place-content-center items-center">
+              <span className="font-extrabold text-3xl px-4">
+                <MdCall />
+              </span>
+              <h2 className="text-center font-extrabold text-[2rem]">
+                CONTACT ME
+              </h2>
+            </div>
             <hr className="border-[#38bdf8]" />
             <div className="p-5 text-center items-center text-lg md:text-[22px]">
               <p>
-                Ready to start a project together? Reach out to me via email at
-                mic81070@gmail.com or connect with me on Facebook and WhatsApp
+                Ready to start a project together? Reach out to me via email or
+                connect with me on Facebook and WhatsApp
               </p>
             </div>
-            <div className="w-[100%] h-60 dark:bg-slate-900 bg-slate-100 rounded-md border border-slate-500/100 hover:border-slate-400 items-center md:w-1/2 sm:w-full ">
+            <form className="w-[100%] h-60 dark:bg-slate-900 bg-slate-100 rounded-md border border-slate-500/100 hover:border-slate-400 items-center md:w-1/2 sm:w-full ">
               <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2 ">
-                {/* <label >Name</label> */}
                 <input
-                  type="email"
+                  type="text"
                   placeholder="Name"
                   required
                   className="bg-transparent "
@@ -262,29 +264,34 @@ function Sections() {
               </div>
 
               <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
-                {/* <label >Email</label> */}
                 <input
                   type="email"
                   placeholder="Email"
                   required
                   className="bg-transparent "
                 />
-                <span className="material-symbols-outlined">mail</span>
+                <span className="text-xl font-extrabold">
+                  <MdOutlineMail />
+                </span>
               </div>
               <div className=" items-center m-4 pb-2 border-b-2 flex  gap-2 justify-between pr-2">
-                {/* <label >Message</label> */}
                 <input
-                  type="email"
+                  type="text"
                   placeholder="Message"
                   required
                   className="bg-transparent "
                 />
-                <span className="material-symbols-outlined">mode_comment</span>
+                <span className="text-xl">
+                  <FiMessageSquare />
+                </span>
               </div>
               <div className=" items-center m-4 pb-2 flex  gap-2 justify-between pr-2">
-                <button className="w-[100%]"> Submit</button>
+                <button type="submit" className="w-[100%]">
+                  {" "}
+                  Submit
+                </button>
               </div>
-            </div>
+            </form>
           </section>
         </section>
       </div>

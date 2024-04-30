@@ -36,3 +36,57 @@ import { useState } from "react";
                 id="bar"
                 className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
               ></i>
+
+
+
+
+
+
+
+
+
+
+              //css 
+              #nav-side {
+  height: 80vh;
+  width: 60%;
+  top: 60px;
+  right: 0;
+  padding-top: 40px;
+  padding-left: 20px;
+  position: absolute;
+  gap: 1.25rem;
+  background: rgb(15, 23, 42);
+  background: #110e33;
+  transition: 0.3s ease-in-out;
+  border-radius: 15px 15px 20px 20px;
+}
+#nav-side.active {
+  right: -900px;
+  /* display: none; */
+}
+
+
+.hello {
+  display: none;
+  position: absolute;
+  width: 10rem;
+  background: #fff;
+  padding: 1rem;
+  margin: 2rem;
+  border-radius: 10px;
+  color: #110e33;
+  font-size: larger;
+  font-weight: bolder;
+  text-align: center;
+  position: fixed;
+
+  /* display: none; */
+}
+
+
+
+
+
+
+        <video src={video} autoPlay muted loop className="absolute w-full" ></video>

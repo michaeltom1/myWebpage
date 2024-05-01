@@ -63,11 +63,17 @@ h1 {
 img {
   width: 100%;
   object-fit: cover;
+  /* object-position: center; */
 }
-img:hover{
+.p-img:hover{
   transform: scale(1.03);
   
   transition: 0.5s ease;
+}
+.p-img{
+  width: 30rem;
+  height: 20rem;
+  object-fit: fill;
 }
 
 button,
@@ -110,6 +116,7 @@ section {
 .nav-scroll {
   background: #041644;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  background: #000;
 }
 .navbar {
   transition: all 0.5s;
@@ -117,6 +124,11 @@ section {
 .navbar.active {
   transition: all 1.5s;
   background: #041644;
+}
+
+.shadow-colored{
+  box-shadow: 5px 5px 5px #38bdf8;
+  text-shadow: #38bdf8;
 }
 
 .fadeInTop {
@@ -203,6 +215,3 @@ section {
 }
  
 
-.service-container{
- 
-}

@@ -2,6 +2,7 @@
 
 
 import michael from "../assets/michael.png";
+import Nav from "./Nav";
 
 
 //bg-slate-500 border border-slate-800 ro
@@ -11,11 +12,9 @@ import michael from "../assets/michael.png";
 function About() {
     return (
       <>
+        {location.pathname === "/" ? "" : <Nav />}
         <section id="about" className="header mx-0  ">
-          <h2 className="text-center font-extrabold text-[2rem]">
-        
-            ABOUT ME
-          </h2>
+          <h2 className="text-center font-extrabold text-[2rem]">ABOUT ME</h2>
           <div className="px-5 md:px-20">
             <hr className="border-[#38bdf8]" />
           </div>

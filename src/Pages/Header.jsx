@@ -1,5 +1,5 @@
 import Resume from "../assets/Michael Resume.pdf";
-import video from "../assets/video.mp4";
+
 function Header() {
   return (
     <>
@@ -10,13 +10,13 @@ function Header() {
           >
             HI, I AM <br />
             MICHAEL <br />
-            TOM.  
+            TOM.
           </h1>
           <h3
             className="text-center text-[1rem] mt-10 font-bold md:text-[2rem]"
             onClick={alert}
           >
-            GRAPHIC DESIGNER AND WEB DEVELOPER
+            WEB DEVELOPER AND GRAPHIC DESIGNER 
           </h3>
 
           <a href={Resume} download="Michael_resume" className="text-center">

@@ -9,7 +9,6 @@ import { Link } from "react-router-dom";
 function Nav() {
   const [clicked, setClicked] = useState(false);
   const [navbar, setNavbar] = useState(false);
-  
 
   const handleClick = () => {
     setClicked(!clicked);
@@ -56,56 +55,124 @@ function Nav() {
               }`}
               onClick={handleClick}
             >
-              <li>
-                <a
-                  href="#"
-                  className="text-sky-500 hover:text-sky-400 font-bold hover:underline"
-                >
-                  HOME
-                </a>
-              </li>
-              <li>
-                <a
-                  to="about"
-                  href="#about"
-                  className="hover:text-sky-400 font-bold hover:underline"
-                >
-                  ABOUT
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#services"
-                  className="hover:text-sky-400 font-bold hover:underline uppercase"
-                >
-                  services
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#projects"
-                  
-                  className="hover:text-sky-400 font-bold hover:underline"
-                >
-                  PROJECTS
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#testimonials"
-                  className="hover:text-sky-400 font-bold hover:underline"
-                >
-                  TESTIMONIALS
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#contact"
-                  className={`hover:text-sky-400 font-bold hover:underline`}
-                >
-                  CONTACT
-                </a>
-              </li>
+              {location.pathname === "/" ? (
+                <li>
+                  <a
+                    href="#top"
+                    className="text-sky-500 font-bold hover:underline"
+                  >
+                    HOME
+                  </a>
+                </li>
+              ) : (
+                <li>
+                  <Link
+                    to="/"
+                    className=" hover:text-sky-400 font-bold hover:underline"
+                  >
+                    HOME
+                  </Link>
+                </li>
+              )}
+
+              {location.pathname === "/" ? (
+                <li>
+                  <a
+                    href="#about"
+                    className="hover:text-sky-400 font-bold hover:underline uppercase"
+                  >
+                    about
+                  </a>
+                </li>
+              ) : (
+                <li>
+                  <a
+                    href="/about"
+                    className="hover:text-sky-400 font-bold hover:underline uppercase"
+                  >
+                    about
+                  </a>
+                </li>
+              )}
+
+              {location.pathname === "/servicePage" ? (
+                <li>
+                  <a
+                    href="/#services"
+                    className="text-sky-400 font-bold hover:underline uppercase"
+                  >
+                    services
+                  </a>
+                </li>
+              ) : (
+                <li>
+                  <a
+                    // this code is only true for now
+                    href="#services"
+                    className="hover:text-sky-400 font-bold hover:underline uppercase"
+                  >
+                    services
+                  </a>
+                </li>
+              )}
+              {location.pathname === "/" ? (
+                <li>
+                  <a
+                    href="#projects"
+                    className="hover:text-sky-400 font-bold hover:underline"
+                  >
+                    PROJECTS
+                  </a>
+                </li>
+              ) : (
+                <li>
+                  <a
+                    href="/#projects"
+                    className="hover:text-sky-400 font-bold hover:underline"
+                  >
+                    PROJECTS
+                  </a>
+                </li>
+              )}
+              {location.pathname === "/" ? (
+                <li>
+                  <a
+                    href="#testimonials"
+                    className="hover:text-sky-400 font-bold hover:underline"
+                  >
+                    TESTIMONIALS
+                  </a>
+                </li>
+              ) : (
+                <li>
+                  <a
+                    href="/#testimonials"
+                    className="hover:text-sky-400 font-bold hover:underline"
+                  >
+                    TESTIMONIALS
+                  </a>
+                </li>
+              )}
+              {location.pathname === "/" ? (
+                <li>
+                  <a
+                    href="#contact"
+                    className={`hover:text-sky-400 font-bold hover:underline`}
+                  >
+                    CONTACT
+                  </a>
+                </li>
+              ) : (
+                <li>
+                  <a
+                    href="/#contact"
+                    className={`hover:text-sky-400 font-bold hover:underline`}
+                  >
+                    CONTACT
+                  </a>
+                </li>
+              )}
+
               <li className="md:hidden">
                 <Link
                   to="servicePage"
@@ -138,3 +205,6 @@ function Nav() {
 }
 
 export default Nav;
+
+
+ 

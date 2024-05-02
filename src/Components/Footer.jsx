@@ -6,7 +6,7 @@ function Footer() {
       <footer className="dark:bg-[#080c16] py-5 relative">
         <div>
           <a href="#">
-            <h2 className="text-center font-bold text-[1rem] text-slate-600 hover:text-[#38bdf8]">
+            <h2 className="text-center font-bold text-[1rem] text-[#38bdf8]">
               {/* { alert("Hello there")} */}
               MICHAEL TOM
             </h2>

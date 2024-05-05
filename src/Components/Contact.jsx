@@ -8,7 +8,7 @@ import { MdOutlineMail } from "react-icons/md";
 function Contact() {
   return (
     <div>
-      <section id="contact" className="pb-8">
+      <section id="contact" className="pb-8 ">
         <div className="flex place-content-center items-center">
           <span className="font-extrabold text-3xl px-4">
             <MdCall />
@@ -56,7 +56,7 @@ function Contact() {
             </span>
           </div>
           <div className=" items-center m-4 pb-2 flex  gap-2 justify-between pr-2">
-            <button type="submit" className="w-[100%]">
+            <button type="submit" className="w-[100%] text-white">
               {" "}
               Submit
             </button>

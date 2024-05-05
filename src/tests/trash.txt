@@ -264,3 +264,72 @@ export default Nav;
               <img src={calender} alt="calender" className="" />
             </div>
           </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          ////theme
+          // ThemeContext.js
+import { createContext, useState, useContext, useEffect } from "react";
+
+const ThemeContext = createContext();
+
+export const ThemeProvider = ({ children }) => {
+  
+    const [theme, setTheme] = useState("null");
+
+    useEffect(() => {
+      if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+        setTheme("dark");
+      } else {
+        setTheme("light");
+      }
+    }, []);
+
+    useEffect(() => {
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+    }, [theme]);
+
+    const themeSwitch = () => {
+      setTheme(theme === "dark" ? "light" : "dark");
+    };
+
+  return (
+    <ThemeContext.Provider value={{ theme, themeSwitch }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+};
+
+export const useTheme = () => {
+  return useContext(ThemeContext);
+};

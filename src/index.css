@@ -2,61 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #16162b;
-
   scroll-behavior: smooth;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* vars */
+  --primary-color: #06060c;
+  --button-bg-color: #0014c7;
+  background: var(--primary-color);
 }
-
-a {
-  font-weight: 500;
-  text-decoration: inherit;
-}
-
-.test {
-  filter: brightness(50%);
-  grid-row: auto;
-}
-
-.slider {
-  scrollbar-width: none;
-} 
-
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
   min-width: 320px;
   min-height: 100vh;
-  scroll-behavior: smooth;
-
 }
-
-.header {
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 20%,
-    rgba(2, 31, 69, 1) 60%,
-    rgba(2, 48, 86, 1) 89%,
-    rgba(18, 61, 92, 1) 100%
-  );
-}
-
-.fade-in {
-  opacity: 0;
-  transition: opacity 250ms ease-in;
+section {
+  padding-top: 60px;
 }
 h1 {
   font-size: 3.2em;
@@ -65,19 +34,11 @@ h1 {
 img {
   width: 100%;
   object-fit: cover;
-  /* object-position: center; */
 }
-.p-img:hover{
-  transform: scale(1.03);
-  
-  transition: 0.5s ease;
+a {
+  font-weight: 500;
+  text-decoration: inherit;
 }
-.p-img{
-  width: 30rem;
-  height: 20rem;
-  object-fit: fill;
-}
-
 button,
 .btn {
   border-radius: 8px;
@@ -86,14 +47,53 @@ button,
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #0014c7;
+  background-color: var(--button-bg-color);
   cursor: pointer;
   transition: border-color 0.25s;
+  color: #ffffff;
 }
 input {
   border: none;
   outline: none;
-  
+}
+.slider {
+  scrollbar-width: none;
+}
+
+
+@layer utilities {
+  .bg-custom-gradient-dark {
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 20%,
+      rgba(2, 31, 69, 1) 60%,
+      rgba(2, 48, 86, 1) 89%,
+      rgba(18, 61, 92, 1) 100%
+    );
+  }
+  .bg-custom-gradient-light {
+      background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(217, 218, 218, 1) 100%
+    );
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.p-img:hover {
+  transform: scale(1.03);
+
+  transition: 0.5s ease;
+}
+.p-img {
+  width: 30rem;
+  height: 20rem;
+  object-fit: fill;
 }
 
 .btn-m {
@@ -111,10 +111,6 @@ input {
   right: 0;
 }
 
-section {
-  padding-top: 60px;
-  /* height: 100vh; */
-}
 .nav-scroll {
   background: #041644;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
@@ -122,16 +118,16 @@ section {
 }
 .navbar {
   transition: all 0.5s;
+ 
 }
 .navbar.active {
   transition: all 1.5s;
   background: #041644;
+  color:#ffffff;
 }
 
-.shadow-colored{
-  box-shadow: 5px 5px 5px #38bdf8;
-  text-shadow: #38bdf8;
-}
+
+/* ====================HEADER ANIMATIONS===================== */
 
 .fadeInTop {
   -webkit-animation: fadeInTop 2s both;
@@ -181,33 +177,15 @@ section {
   }
 }
 
+/* ====================END OF HEADER ANIMATIONS===================== */
 @media (prefers-color-scheme: light) {
   :root {
-    color: rgb(30, 41, 59);
+    /* color: #1e293b; */
     background-color: #ffffff;
   }
-  a:hover {
-    color: #747bff;
-  }
-
   .sec2 {
     background: white;
-  }
-  .header {
-    background: white;
-  }
-  button {
-    color: white;
-  }
-
-  .header {
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 1) 9%,
-      rgba(193, 196, 200, 1) 50%,
-      rgba(255, 254, 254, 1) 100%
-    );
+  
   }
 
   #nav-side {
@@ -215,5 +193,3 @@ section {
     background: #ffffff;
   }
 }
- 
-

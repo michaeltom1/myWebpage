@@ -1,20 +1,15 @@
 import Resume from "../assets/Michael Resume.pdf";
 
-import TypedComponent from "../Components/TypedComponent";
+import TypedComponent from "./TypedComponent";
 
 function Header() {
 
-  //  var typed = new Typed(".auto-typed", {
-  //    String: ["Coding", "Sleeping", "Eating"],
-  //    typeSpeed: 150,
-  //    backSpeed: 150,
-  //    loop: true,
-  //  });
+ 
  
 
   return (
     <>
-      <header className="header px-[20px] md:pt-0 pt-10">
+      <header className="px-[20px] md:pt-0 pt-10  bg-custom-gradient-light dark:bg-custom-gradient-dark">
         <div className="fadeInTop  pt-16 rounded-lg p-2 h-[60vh] place-content-center grid md:h-[100vh]">
           <h1
             className={` text-slate-800 md:text-[5rem] font-extrabold text-center sm:text-5xl text-6xl dark:text-white`}
@@ -23,15 +18,12 @@ function Header() {
             MICHAEL <br />
             TOM<span className="text-[#38bdf8]">.</span>
           </h1>
-          <h2 className="text-center text-[1rem] mt-10 font-bold md:text-[2rem] uppercase">
+          <h2 className="text-center text-[1rem] mt-10 font-bold md:text-[2rem] uppercase dark:text-white">
             I&#39;m a&thinsp;
             <span className=" text-[#38bdf8]">
               <TypedComponent />
             </span>
           </h2>
-          {/* <h2 className="text-center text-[1rem] mt-10 font-bold md:text-[2rem]">
-            WEB DEVELOPER AND GRAPHIC DESIGNER
-          </h2> */}
 
           <a href={Resume} download="Michael_resume" className="text-center">
             <button className="text-center bg-[#38bdf8] mt-5">

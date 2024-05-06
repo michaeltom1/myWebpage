@@ -5,6 +5,9 @@ const notify = () => toast("Hi there! 👋🙋‍♂️");
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { LuMoonStar } from "react-icons/lu";
+import { MdOutlineWbSunny } from "react-icons/md";
+import { useEffect } from "react";
 
 function Nav() {
   const [clicked, setClicked] = useState(false);
@@ -22,10 +25,31 @@ function Nav() {
       setNavbar(false);
     }
   };
-
-
-
   window.addEventListener("scroll", changeNavbarBg);
+
+  // theme
+  const [theme, setTheme] = useState("null");
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  const themeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
+  //theme end
   return (
     <>
       <div>
@@ -176,7 +200,7 @@ function Nav() {
                 </li>
               )}
 
-              <li className="md:hidden">
+              <li className="md-:hidden">
                 <Link
                   to="servicePage"
                   target="_blank"
@@ -184,6 +208,11 @@ function Nav() {
                 >
                   ServicePage
                 </Link>
+              </li>
+              <li>
+                <button onClick={themeSwitch}>
+                  {theme === "dark" ? <MdOutlineWbSunny /> : <LuMoonStar />}
+                </button>
               </li>
             </ul>
           </div>

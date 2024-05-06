@@ -13,6 +13,7 @@
   --primary-color: #06060c;
   --button-bg-color: #0014c7;
   background: var(--primary-color);
+  color:#253144;
 }
 * {
   margin: 0;

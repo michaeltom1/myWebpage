@@ -77,7 +77,7 @@ function Nav() {
           </div>
           <div>
             <ul
-              className={`md:relative md:gap-5 md:m-0 md:bg-transparent0 md:flex-row md:p-0 md:py-0 md:h-0 md:w-full md:items-center md:right-0 dark:bg-slate-800 shadow-xl bg-slate-200 h-[30rem] absolute rounded-xl p-5 flex flex-col gap-5  top-0 w-[70%] sm:w-1/2 pt-10 -right-full m-2 dark:text-white ${
+              className={`md:relative md:gap-5 md:m-0 md:bg-transparent0 md:flex-row md:p-0 md:py-0 md:h-0 md:w-full md:items-center md:right-0 dark:bg-slate-800 bg-slate-700 shadow-xl bg-slate-200 h-[30rem] absolute rounded-xl p-5 flex flex-col gap-5  top-0 w-[70%] sm:w-1/2 pt-10 -right-full m-2 dark:text-white text-slate-800 md:text-slate-500 ${
                 clicked ? "sideNav" : "nav-side"
               }`}
               onClick={handleClick}
@@ -200,19 +200,31 @@ function Nav() {
                 </li>
               )}
 
-              <li className="md-:hidden">
+              <li className="md:hidden">
                 <Link
                   to="servicePage"
                   target="_blank"
                   className={`hover:text-sky-400 font-bold hover:underline uppercase`}
                 >
-                  ServicePage
+                  Service Page
                 </Link>
               </li>
               <li>
-                <button onClick={themeSwitch}>
-                  {theme === "dark" ? <MdOutlineWbSunny /> : <LuMoonStar />}
-                </button>
+                <hr className="border-slate-500 md:hidden" />
+                <div className="flex justify-between pr-2 py-2 items-center">
+                  <p className="dark:text-slate-400 text-slate-800 text-base font-bold md:hidden">
+                    Switch theme
+                  </p>
+                  <button
+                    onClick={themeSwitch}
+                    className={`fill-sky-400/20 md:bg-transparent font-extrabold text-sky-400 md:p-0 p-2 px-4 gap-2 flex items-center bg-slate-600 text-base`}
+                  >
+                    {theme === "dark" ? <LuMoonStar /> : <MdOutlineWbSunny />}
+                    <div className="text-slate-200 font-normal text-base md:hidden">
+                      {theme === "dark" ? "Dark" : "Light"}
+                    </div>
+                  </button>
+                </div>
               </li>
             </ul>
           </div>

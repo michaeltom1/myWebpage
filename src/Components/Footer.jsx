@@ -11,7 +11,6 @@ function Footer() {
         <div>
           <a href="#">
             <h2 className="text-center font-bold text-[1rem] text-[#45bef1]">
-              {/* { alert("Hello there")} */}
               MICHAEL TOM
             </h2>
           </a>
@@ -34,7 +33,7 @@ function Footer() {
           </p>
         </div>
         <a href="#">
-          <button className="absolute bottom-2 m-1 p-1 bg-inherit rounded-sm font-extrabold text-lg md:bg-[#0014c7] md:p-3 right-5">
+          <button className="absolute bottom-2 m-1 p-1 bg-inherit rounded-sm font-extrabold text-lg md:bg-[#0014c7] md:p-3 right-5 text-slate-800 dark:text-slate-200 md:text-white">
             &#x2191;
           </button>
         </a>

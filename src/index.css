@@ -8,12 +8,11 @@
   font-weight: 400;
   color-scheme: light dark;
   scroll-behavior: smooth;
+  @apply transition-colors duration-500;
 
   /* vars */
   --primary-color: #06060c;
   --button-bg-color: #0014c7;
-  background: var(--primary-color);
-  color:#253144;
 }
 * {
   margin: 0;
@@ -179,18 +178,4 @@ input {
 }
 
 /* ====================END OF HEADER ANIMATIONS===================== */
-@media (prefers-color-scheme: light) {
-  :root {
-    /* color: #1e293b; */
-    background-color: #ffffff;
-  }
-  .sec2 {
-    background: white;
-  
-  }
 
-  #nav-side {
-    color: #242424;
-    background: #ffffff;
-  }
-}

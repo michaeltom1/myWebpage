@@ -18,7 +18,7 @@ function Header() {
             MICHAEL <br />
             TOM<span className="text-[#38bdf8]">.</span>
           </h1>
-          <h2 className="text-center text-[1rem] mt-10 font-bold md:text-[2rem] uppercase dark:text-white">
+          <h2 className="text-center text-[1rem] mt-10 font-bold md:text-[2rem] uppercase dark:text-white text-slate-800">
             I&#39;m a&thinsp;
             <span className=" text-[#38bdf8]">
               <TypedComponent />

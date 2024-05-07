@@ -202,7 +202,7 @@ function Nav() {
 
               <li className="md:hidden">
                 <Link
-                  to="servicePage"
+                  to="/servicePage"
                   target="_blank"
                   className={`hover:text-sky-400 font-bold hover:underline uppercase`}
                 >

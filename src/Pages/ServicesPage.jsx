@@ -19,7 +19,7 @@ import Footer from "../Components/Footer";
 
 export default function ServicesPage() {
   return (
-    <div>
+    <div id="servicePage">
       <Nav/>
       <div className="h-screen0 pt-16 md:mx-16 mx-2">
         <nav className="bg-sky-500  my-2 p-2 rounded-md">

@@ -1,23 +1,22 @@
-// import React from 'react'
 import { MdGroup } from "react-icons/md";
 import testimonial from "../assets/testimonial1.jpg";
 import testimonial1 from "../assets/team-3.jpg";
 import testimonial2 from "../assets/team-2.jpg";
+import { global } from "../Styles/globalStyle";
+import { testimonials } from "../Styles/testimonials";
 
 function Testimonials() {
   return (
     <div>
       <section id="testimonials">
-        <div className="flex place-content-center items-center">
-          <span className="text-[2rem] font-bold text-3xl px-4">
+        <div className={`${global.subhead}`}>
+          <h2 className={`${global.subheadIcon}`}>
             <MdGroup />
-          </span>
-          <h2 className="text-center font-extrabold text-[2rem]">
-            TESTIMONIALS
           </h2>
+          <h2 className={`${global.subheadH2}`}>TESTIMONIALS</h2>
         </div>
-        <hr className="border-[#38bdf8]" />
-        <div className="p-5 text-center items-center text-lg md:text-[22px]">
+        <hr className={`${global.hr}`} />
+        <div className={`${testimonials.text}`}>
           <p>
             Hear what my clients have to say! Testimonials from satisfied
             clients underscore my dedication, professionalism, and ability to
@@ -25,17 +24,16 @@ function Testimonials() {
           </p>
         </div>
 
-        <div className="lg:grid lg:grid-cols-3 gap-5 sm:block">
-          <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-5 mb-2 text-black dark:text-white transition-all">
-            <div className="flex items-center">
+        <div className={`${testimonials.displayGrid}`}>
+          <figure className={`${testimonials.figure}`}>
+            <div className={`${testimonials.displayFlex}`}>
               <img
-                className="w-24 h-24 rounded-full"
+                className={`${testimonials.img}`}
                 src={testimonial}
                 alt=""
                 width={384}
                 height={512}
               />
-
               <figcaption className="px-5">
                 <div>
                   <b>Alex Johnson</b>
@@ -43,7 +41,8 @@ function Testimonials() {
                 <div>Web Developer</div>
               </figcaption>
             </div>
-            <div className="pt-6 space-y-4">
+
+            <div className="pt-6">
               <blockquote>
                 <p className="text-lg px-10 ">
                   &quot;Michael pushes boundaries. His unconventional designs
@@ -54,10 +53,10 @@ function Testimonials() {
               </blockquote>
             </div>
           </figure>
-          <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-5 mb-2 text-black dark:text-white">
-            <div className="flex items-center">
+          <figure className={`${testimonials.figure}`}>
+            <div className={`${testimonials.displayFlex}`}>
               <img
-                className="w-24 h-24 rounded-full"
+                className={`${testimonials.img}`}
                 src={testimonial1}
                 alt=""
                 width={384}
@@ -70,8 +69,7 @@ function Testimonials() {
                 <div>Graphic Designer</div>
               </figcaption>
             </div>
-
-            <div className="pt-6 space-y-4">
+            <div className="pt-6">
               <blockquote>
                 <p className="text-lg px-10 ">
                   &quot;Michael&#39;s attention to detail is awe-inspiring. His
@@ -82,16 +80,15 @@ function Testimonials() {
               </blockquote>
             </div>
           </figure>
-          <figure className="bg-slate-100 rounded-xl dark:bg-slate-800 hover:border border-slate-400 p-5 mb-2 text-black dark:text-white">
-            <div className="flex items-center">
+          <figure className={`${testimonials.figure}`}>
+            <div className={`${testimonials.displayFlex}`}>
               <img
-                className="w-24 h-24 rounded-full"
+                className={`${testimonials.img}`}
                 src={testimonial2}
                 alt=""
                 width={384}
                 height={512}
               />
-              {/* pb-2 px-10 */}
               <figcaption className="px-5">
                 <div>
                   <b>Sarah Willaiams</b>
@@ -100,7 +97,7 @@ function Testimonials() {
               </figcaption>
             </div>
 
-            <div className="pt-6 space-y-4">
+            <div className="pt-6">
               <blockquote>
                 <p className="text-lg px-10 ">
                   Michael&#39;s designs speak louder than words. His took our

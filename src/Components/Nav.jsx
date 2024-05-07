@@ -9,6 +9,8 @@ import { LuMoonStar } from "react-icons/lu";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { useEffect } from "react";
 
+import { navcss } from "../Styles/nav";
+
 function Nav() {
   const [clicked, setClicked] = useState(false);
   const [navbar, setNavbar] = useState(false);
@@ -54,9 +56,7 @@ function Nav() {
     <>
       <div>
         <nav
-          className={`navbar flex items-center p-2 justify-between px-4 sm:px-16 w-[100%] bg-fixed fixed z-10 top-0 md:bg-transparent bg-[#041644] md:items-center   ${
-            navbar ? "navbar active" : "navbar"
-          }`}
+          className={`${navcss.navbar}${navbar ? "navbar active" : "navbar"}`}
         >
           <div className="logo">
             <button onClick={notify}>
@@ -77,7 +77,7 @@ function Nav() {
           </div>
           <div>
             <ul
-              className={`md:relative md:gap-5 md:m-0 md:bg-transparent0 md:flex-row md:p-0 md:py-0 md:h-0 md:w-full md:items-center md:right-0 dark:bg-slate-800 bg-slate-700 shadow-xl bg-slate-200 h-[30rem] absolute rounded-xl p-5 flex flex-col gap-5  top-0 w-[70%] sm:w-1/2 pt-10 -right-full m-2 dark:text-white text-slate-800 md:text-slate-500 ${
+              className={`${navcss.navbarul} ${
                 clicked ? "sideNav" : "nav-side"
               }`}
               onClick={handleClick}

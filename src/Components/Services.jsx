@@ -52,7 +52,7 @@ function Services() {
                 </p>
               </div>
               <button className="mt-2">
-                <a href="servicePage#graphicDesign">Read more</a>
+                <Link to="servicePage">Read more</Link>
               </button>
             </div>
             <div className={`${service.serviceBox}`}>
@@ -66,7 +66,7 @@ function Services() {
                 <p>I have expertices in digital Marketing.</p>
               </div>
               <button className="mt-2">
-                <a href="servicePage">Read more</a>
+                <Link to="servicePage">Read more</Link>
               </button>
             </div>
             <div className={`${service.serviceBox} ${service.serviceBox4}`}>
@@ -80,7 +80,7 @@ function Services() {
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
               </div>
               <button className="mt-2">
-                <a href="servicePage">Read more</a>
+                <Link to="servicePage">Read more</Link>
               </button>
             </div>
           </div>

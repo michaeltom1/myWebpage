@@ -4,6 +4,8 @@
 
 :root {
   @apply transition-colors duration-500;
+  @apply bg-slate-900;
+  background-color: #0f172a;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -11,6 +13,7 @@
   scroll-behavior: smooth;
   --primary-color: #06060c;
   --button-bg-color: #0014c7;
+  
 }
 * {
   margin: 0;
@@ -57,8 +60,6 @@ input {
 .slider {
   scrollbar-width: none;
 }
-
-
 @layer utilities {
   .bg-custom-gradient-dark {
     background: linear-gradient(
@@ -117,8 +118,6 @@ input {
   background: #041644;
   /* color:#ffffff; */
 }
-
-
 /* ====================HEADER ANIMATIONS===================== */
 
 .fadeInTop {

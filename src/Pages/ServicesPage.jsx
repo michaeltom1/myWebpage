@@ -2,8 +2,8 @@
 
 import Nav from "../Components/Nav";
 
-import webpage from "../assets/webbg.png"
-import netflix from "../assets/netflix-screenshot.png"
+import webpage from "../assets/webbg.png";
+import netflix from "../assets/netflix-screenshot.png";
 import login from "../assets/Screenshot-login.png";
 
 import blueCertificate from "../assets/blue-certificate.jpg";
@@ -16,11 +16,10 @@ import flyer from "../assets/codeZone.jpg";
 import fridgeWoman from "../assets/fridge-woman.jpg";
 import Footer from "../Components/Footer";
 
-
 export default function ServicesPage() {
   return (
     <div id="servicePage">
-      <Nav/>
+      <Nav />
       <div className="h-screen0 pt-16 md:mx-16 mx-2">
         <nav className="bg-sky-500  my-2 p-2 rounded-md">
           <h1 className="font-bold text-5xl">
@@ -54,7 +53,10 @@ export default function ServicesPage() {
             />
           </div>
         </section>
-        <section id="graphicDesign" className="webdev pt-0- rounded-md p-2 pt-16">
+        <section
+          id="graphicDesign"
+          className="webdev pt-0- rounded-md p-2 pt-16"
+        >
           <h2 className="text-2xl font-bold py-4">Graphic Design Services </h2>
           <div className="flex flex-col gap-4 sm:flex-row flex-wrap">
             <img
@@ -63,9 +65,24 @@ export default function ServicesPage() {
               className="rounded-xl shadow-md w-[30rem] h-[20rem]"
             />
             <img
+              src={card2}
+              alt="myWebpage"
+              className="rounded-xl shadow-md md:w-[30rem] h-[20rem]"
+            />
+            <img
               src={fullGistCertificate}
               alt="myWebpage"
-              className="rounded-xl shadow-md  "
+              className="rounded-xl shadow-md w-2/6 "
+            />
+            <img
+              src={flyer}
+              alt="myWebpage"
+              className="rounded-xl shadow-md md:w-1/3"
+            />
+            <img
+              src={fridgeWoman}
+              alt="myWebpage"
+              className="rounded-xl shadow-md md:w-1/3"
             />
             <img
               src={calender}
@@ -82,21 +99,7 @@ export default function ServicesPage() {
               alt="myWebpage"
               className="rounded-xl shadow-md md:w-1/3"
             />
-            <img
-              src={card2}
-              alt="myWebpage"
-              className="rounded-xl shadow-md md:w-[30rem] h-[20rem]"
-            />
-            <img
-              src={flyer}
-              alt="myWebpage"
-              className="rounded-xl shadow-md md:w-1/3"
-            />
-            <img
-              src={fridgeWoman}
-              alt="myWebpage"
-              className="rounded-xl shadow-md md:w-1/3"
-            />
+            
           </div>
         </section>
       </div>

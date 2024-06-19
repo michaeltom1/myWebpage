@@ -75,7 +75,7 @@ function Services() {
               </span>
               <div className="text">
                 <h3 className={`${service.serviceBoxHeading}`}>
-                  Web Development
+                  Tutor
                 </h3>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
               </div>

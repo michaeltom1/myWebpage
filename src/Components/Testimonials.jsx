@@ -45,10 +45,12 @@ function Testimonials() {
             <div className="pt-6">
               <blockquote>
                 <p className="text-lg px-10 ">
-                  &quot;Michael pushes boundaries. His unconventional designs
+                  {/* &quot;Michael pushes boundaries. His unconventional designs
                   challenge norms and leave a lasting impression. His creativity
                   knows no bounds, and our brand is forever transformed because
-                  of it.&quot;
+                  of it.&quot; */}
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae suscipit, eius, cum eum et ex dignissimos culpa iste vel perspiciatis dolor. Minus tenetur distinctio aut, deleniti cumque excepturi non saepe.
+                  
                 </p>
               </blockquote>
             </div>
@@ -72,10 +74,11 @@ function Testimonials() {
             <div className="pt-6">
               <blockquote>
                 <p className="text-lg px-10 ">
-                  &quot;Michael&#39;s attention to detail is awe-inspiring. His
+                  {/* &quot;Michael&#39;s attention to detail is awe-inspiring. His
                   pixel-perfect designs elevate our user experience. Whether
                   it&#39;s a mobile app or a website, He crafts interfaces that
-                  users love to explore.&quot;
+                  users love to explore.&quot; */}
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae suscipit, eius, cum eum et ex dignissimos culpa iste vel perspiciatis dolor. Minus tenetur distinctio aut, deleniti cumque excepturi non saepe.
                 </p>
               </blockquote>
             </div>
@@ -100,10 +103,11 @@ function Testimonials() {
             <div className="pt-6">
               <blockquote>
                 <p className="text-lg px-10 ">
-                  Michael&#39;s designs speak louder than words. His took our
+                  {/* Michael&#39;s designs speak louder than words. His took our
                   branding to new heights with elegant logos, captivating
                   visuals, and cohesive color schemes. His ability to convey our
-                  brand story through graphics is unmatched.
+                  brand story through graphics is unmatched. */}
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae suscipit, eius, cum eum et ex dignissimos culpa iste vel perspiciatis dolor. Minus tenetur distinctio aut, deleniti cumque excepturi non saepe.
                 </p>
               </blockquote>
             </div>

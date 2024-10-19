@@ -1,4 +1,4 @@
-import { headercss } from "../Styles/headerStyle";
+import { headercss } from "../Styles/Style";
 import Resume from "../assets/Michael Resume.pdf";
 import TypedComponent from "./TypedComponent";
 

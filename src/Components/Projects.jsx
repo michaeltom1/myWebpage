@@ -5,7 +5,7 @@ import p1 from "../assets/p1.jpg";
 import app1 from "../assets/app-1.jpg";
 import login from "../assets/Screenshot-login.png";
 import { MdWork } from "react-icons/md";
-import { global } from "../Styles/globalStyle";
+import { global } from "../Styles/Style";
 
 function Projects() {
   const displayGrid = "grid gap-2 md:gap-5 md:grid-cols-3 sm:grid-cols-2";

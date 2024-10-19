@@ -3,9 +3,9 @@ import { FaPaintBrush } from "react-icons/fa";
 import { BsBarChartFill } from "react-icons/bs";
 import { FaCode } from "react-icons/fa";
 import { IoMdPerson } from "react-icons/io";
-import { global } from "../Styles/globalStyle";
+import { global } from "../Styles/Style";
 import { Link } from "react-router-dom";
-import { service } from "../Styles/serviceStyle";
+import { service } from "../Styles/Style";
 
 function Services() {
   return (

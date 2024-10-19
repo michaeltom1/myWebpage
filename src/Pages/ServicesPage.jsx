@@ -1,11 +1,7 @@
-// import React from 'react'
-
 import Nav from "../Components/Nav";
-
 import webpage from "../assets/webbg.png";
 import netflix from "../assets/netflix-screenshot.png";
 import login from "../assets/Screenshot-login.png";
-
 import blueCertificate from "../assets/blue-certificate.jpg";
 import fullGistCertificate from "../assets/fullgist.jpg";
 import calender from "../assets/calender 2022.jpg";

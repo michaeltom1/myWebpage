@@ -5,8 +5,8 @@ import { FiInstagram } from "react-icons/fi";
 import { LiaLinkedin } from "react-icons/lia";
 import { RxLinkedinLogo } from "react-icons/rx";
 import { SiGmail } from "react-icons/si";
-import { aboutcss } from "../Styles/aboutStyle";
-import { global } from "../Styles/globalStyle";
+import { aboutcss } from "../Styles/Style";
+import { global } from "../Styles/Style";
 
 function About() {
   return (

@@ -1,8 +1,8 @@
 import { MdCall, MdOutlineDriveFileRenameOutline } from "react-icons/md";
 import { FiMessageSquare } from "react-icons/fi";
 import { MdOutlineMail } from "react-icons/md";
-import { global } from "../Styles/globalStyle";
-import { contact } from "../Styles/contact";
+import { global } from "../Styles/Style";
+import { contact } from "../Styles/Style";
 
 
 

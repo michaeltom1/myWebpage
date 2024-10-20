@@ -9,7 +9,7 @@ import { LuMoonStar } from "react-icons/lu";
 import { MdOutlineWbSunny } from "react-icons/md";
 import { useEffect } from "react";
 
-import { navcss } from "../Styles/nav";
+import { navcss } from "../Styles/style";
 
 function Nav() {
   const [clicked, setClicked] = useState(false);

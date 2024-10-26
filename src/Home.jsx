@@ -1,14 +1,14 @@
-// import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
-import Hero from "./components/home/Hero";
-import About from "./components/home/About";
-import Services from "./components/home/Services";
-import Projects from "./components/home/Projects";
-import Contact from "./components/home/Contact";
+import NavBar from "./Components/NavBar";
+import Footer from "./Components/Footer";
+import Hero from "./Components/home/Hero";
+import About from "./Components/home/About";
+import Services from "./Components/home/Services";
+import Projects from "./Components/home/Projects";
+import Contact from "./Components/home/Contact";
 const Home = () => {
   return (
     <>
-      {/* <NavBar /> */}
+      <NavBar />
       <Hero />
       <About />
       <Services />

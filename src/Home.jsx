@@ -1,4 +1,4 @@
-import NavBar from "./components/NavBar";
+// import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Hero from "./components/home/Hero";
 import About from "./components/home/About";
@@ -8,7 +8,7 @@ import Contact from "./components/home/Contact";
 const Home = () => {
   return (
     <>
-      <NavBar />
+      {/* <NavBar /> */}
       <Hero />
       <About />
       <Services />

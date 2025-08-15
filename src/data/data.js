@@ -17,32 +17,39 @@ import {
   blueCertificate,
   fullgist,
 } from "../assets/assets";
+// } from "../assets/assets";
 
+import { FaHome, FaUser, FaServicestack, FaFolderOpen, FaEnvelope } from "react-icons/fa";
 export const navItems = [
   {
     id: 0,
     name: "Home",
     url: "#home",
+    icon: FaHome,
   },
   {
     id: 1,
     name: "About",
     url: "#about",
+    icon: FaUser,
   },
   {
     id: 2,
     name: "Services",
     url: "#services",
+    icon: FaServicestack,
   },
   {
     id: 3,
     name: "Projects",
     url: "#projects",
+    icon: FaFolderOpen,
   },
   {
     id: 4,
     name: "Contact",
     url: "#contact",
+    icon: FaEnvelope,
   },
 ];
 

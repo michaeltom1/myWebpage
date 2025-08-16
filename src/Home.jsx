@@ -5,10 +5,13 @@ import About from "./Components/home/About";
 import Services from "./Components/home/Services";
 import Projects from "./Components/home/Projects";
 import Contact from "./Components/home/Contact";
+import SectionDock from "./Components/SectionDock";
+
 const Home = () => {
   return (
     <>
       <NavBar />
+      <SectionDock />
       <Hero />
       <About />
       <Services />

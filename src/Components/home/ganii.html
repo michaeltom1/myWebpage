@@ -1,0 +1,40 @@
+<div
+  style="
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    width: 100vw;
+    height: 100vh;
+  "
+>
+  <svg
+    width="100%"
+    height="100%"
+    style="position: absolute; inset: 0; min-height: 100vh"
+  >
+    <defs>
+      <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+        <path
+          d="M 40 0 L 0 0 0 40"
+          fill="none"
+          stroke="#64748b22"
+          stroke-width="1"
+        />
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grid)" />
+  </svg>
+</div>
+
+<style>
+  {`
+          @keyframes pulse-slow {
+            0%, 100% { transform: scale(1); opacity: 0.3; }
+            50% { transform: scale(1.1); opacity: 0.5; }
+          }
+          .animate-pulse-slow { animation: pulse-slow 6s ease-in-out infinite; }
+        `}
+</style>
+
+apply the grid background through the whole page

@@ -9,7 +9,7 @@ function SectionScaffold({
   return (
     <section id={sectionId} className="mx-auto w-4/5 py-16">
       <div className={`flex justify-center font-extrabold`}>
-        <h2 className="text-4xl flex items-center gap-4 pb-3">
+        <h2 className="text-4xl flex items-center gap-4 pb-3 ">
           {Icon && <Icon className="text-accent" />}
           <span>
             {title}&thinsp;

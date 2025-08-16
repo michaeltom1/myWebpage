@@ -19,7 +19,13 @@ import {
 } from "../assets/assets";
 // } from "../assets/assets";
 
-import { FaHome, FaUser, FaServicestack, FaFolderOpen, FaEnvelope } from "react-icons/fa";
+import {
+  FaHome,
+  FaUser,
+  FaServicestack,
+  FaFolderOpen,
+  FaEnvelope,
+} from "react-icons/fa";
 export const navItems = [
   {
     id: 0,
@@ -50,6 +56,13 @@ export const navItems = [
     name: "Contact",
     url: "#contact",
     icon: FaEnvelope,
+  },
+  {
+    id: 5,
+    name: "Resume",
+    url: "../assets/Michael-Resume.pdf",
+    icon: null,
+    isResume: true,
   },
 ];
 
@@ -91,7 +104,7 @@ export const serviceCardItems = [
     description:
       "I do all kinds of Graphic Design. Ranging from Banners, Flyers, Certificates, Business cards etc.",
   },
- 
+
   {
     id: 2,
     icon: IoMdPerson,

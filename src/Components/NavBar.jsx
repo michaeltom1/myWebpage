@@ -1,5 +1,6 @@
 import { navItems } from "../data/data";
 import Button from "../feature/Button";
+import { MichaelResume } from "../assets/assets";
 import {
   LuMenu,
   LuX,
@@ -10,25 +11,77 @@ import {
   LuMail,
 } from "react-icons/lu";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 const NavBar = () => {
   const [toggle, setToggle] = useState(true);
+  const [isVisible, setIsVisible] = useState(true);
+  const lastScrollY = useRef(0);
   const handleClick = () => {
     setToggle(!toggle);
   };
+
+  useEffect(() => {
+    lastScrollY.current = typeof window !== "undefined" ? window.scrollY : 0;
+    const onScroll = () => {
+      const current = window.scrollY;
+      // always show when near top
+      if (current < 80) {
+        setIsVisible(true);
+        lastScrollY.current = current;
+        return;
+      }
+      // don't hide when mobile menu is open
+      if (!toggle) {
+        setIsVisible(true);
+        lastScrollY.current = current;
+        return;
+      }
+
+      if (current > lastScrollY.current + 10) {
+        // scrolling down
+        setIsVisible(false);
+      } else if (current < lastScrollY.current - 10) {
+        // scrolling up
+        setIsVisible(true);
+      }
+      lastScrollY.current = current;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [toggle]);
   return (
     <>
-      <header className="backdrop-blur-lg bg-white/20 border border-white/20 shadow-xl py-3 fixed left-4 right-4 top-4 z-50 rounded-2xl transition-all duration-500 max-w-screen-xl mx-auto">
+      <header
+        className={`backdrop-blur-lg bg-white/20 border border-white/20 shadow-xl py-3 fixed left-4 right-4 top-4 z-50 rounded-2xl transition-all duration-500 max-w-screen-xl mx-auto ${
+          isVisible ? "translate-y-0 opacity-100" : "-translate-y-28 opacity-0"
+        }`}
+      >
         <nav className="mx-auto w-11/12 md:w-4/5 flex justify-between items-center">
           <div>
             <Button
               text="Michael"
-              className="transition-all duration-300 hover:scale-105"
+              className="transition-all duration-300 hover:scale-105 text-2xl p-2 hidden md:block"
+              padding="py-2 px-4"
+            />
+            <Button
+              text="M"
+              className="transition-all duration-300 hover:scale-105 text-2xl p-2 md:hidden"
+              padding="py-2 px-4"
             />
           </div>
-          <div>
-            <ul className="hidden md:flex gap-6 text-white font-medium">
-              {navItems.map((item) => (
+          <ul className="hidden md:flex gap-6 text-white font-medium">
+            {navItems.map((item) =>
+              item.isResume ? (
+                <li key={item.id}>
+                  <Button
+                    text={item.name}
+                    linkTo={item.url}
+                    target="_blank"
+                    className="!px-6 !py-2 !rounded-xl !font-bold !shadow-lg"
+                  />
+                </li>
+              ) : (
                 <li key={item.id}>
                   <a
                     href={item.url}
@@ -37,30 +90,34 @@ const NavBar = () => {
                     {item.name}
                   </a>
                 </li>
-              ))}
-            </ul>
+              )
+            )}
+          </ul>
+          <span
+            onClick={handleClick}
+            className={`md:hidden z-50 cursor-pointer fixed right-8 top-5 transition-all duration-500 ${
+              isVisible
+                ? "translate-y-0 opacity-100"
+                : "-translate-y-28 opacity-0"
+            }`}
+          >
             <span
-              onClick={handleClick}
-              className="md:hidden z-50 cursor-pointer fixed right-8 top-5 transition-all duration-500"
+              className={`inline-block transition-transform duration-500 ${
+                toggle ? "" : "rotate-180"
+              }`}
             >
-              <span
-                className={`inline-block transition-transform duration-500 ${
-                  toggle ? "" : "rotate-180"
-                }`}
-              >
-                {toggle ? (
-                  <LuMenu size={34} className="text-white drop-shadow-lg" />
-                ) : (
-                  <LuX size={34} className="text-white drop-shadow-lg" />
-                )}
-              </span>
+              {toggle ? (
+                <LuMenu size={34} className="text-white drop-shadow-lg" />
+              ) : (
+                <LuX size={34} className="text-white drop-shadow-lg" />
+              )}
             </span>
-          </div>
+          </span>
         </nav>
       </header>
       {/* Mobile Modal: appears below header, not blocking header contents */}
       <div
-        className={`md:hidden absolute left-4 right-4 top-[calc(4rem+1rem)] mt-4 rounded-2xl z-40 overflow-hidden transition-all duration-500 ${
+        className={`md:hidden fixed left-4 right-4 top-[calc(4rem+1rem)] mt-4 rounded-2xl z-40 overflow-hidden transition-all duration-500 ${
           toggle
             ? "opacity-0 scale-95 pointer-events-none"
             : "opacity-100 scale-100"
@@ -75,6 +132,18 @@ const NavBar = () => {
             }`}
           >
             {navItems.map((item) => {
+              if (item.isResume) {
+                return (
+                  <li key={item.id}>
+                    <Button
+                      text="Resume"
+                      linkTo={item.url}
+                      className="my-6"
+                      target="_blank"
+                    />
+                  </li>
+                );
+              }
               let Icon;
               switch (item.name) {
                 case "Home":

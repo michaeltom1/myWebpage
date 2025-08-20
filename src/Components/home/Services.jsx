@@ -4,9 +4,11 @@ import ServiceCard from "../../feature/ServiceCard";
 import { serviceCardItems } from "../../data/data";
 import { useState } from "react";
 import useScrollFadeIn from "../../feature/useScrollFadeIn";
+import useStaggeredReveal from "../../feature/useStaggeredReveal";
 
 const Services = () => {
   const fadeRef = useScrollFadeIn();
+  const stagRef = useStaggeredReveal({ stagger: 140 });
   const [activeItem, setActiveItem] = useState(null);
   return (
     <SectionScaffold
@@ -42,11 +44,11 @@ const Services = () => {
             <rect width="100%" height="100%" fill="url(#services-grid)" />
           </svg>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div ref={stagRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {serviceCardItems.map((item) => (
             <div
               key={item.id}
-              className="bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl rounded-3xl p-8 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+              className="reveal bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl rounded-3xl p-8 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
             >
               <div className="mb-4">
                 <span className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 via-cyan-400 to-purple-500 text-white text-3xl shadow-lg">

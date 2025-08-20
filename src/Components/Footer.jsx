@@ -50,12 +50,12 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={item.label}
-                className="transition-transform duration-300 hover:scale-110"
+                className="group transition-transform duration-300 hover:scale-110"
               >
                 <span className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white/10 shadow-lg backdrop-blur-lg border border-white/20 ">
                   <item.icon
                     size={28}
-                    className="text-blue-500 group-hover:text-cyan-400 transition-colors duration-300"
+                    className="text-blue-500 group-hover:text-cyan-400 transition-colors duration-300 wiggle-on-hover"
                   />
                 </span>
               </a>

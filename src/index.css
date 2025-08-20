@@ -84,3 +84,62 @@ body::after {
   opacity: 1;
   transform: none;
 }
+
+/* staggered reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 520ms ease, transform 520ms ease;
+}
+.reveal-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* footer icon wiggle animation */
+@keyframes footer-wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-12deg);
+  }
+  60% {
+    transform: rotate(8deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.wiggle-on-hover {
+  display: inline-block;
+  transform-origin: 50% 50%;
+}
+.group:hover .wiggle-on-hover {
+  animation: footer-wiggle 600ms cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* loading fade out */
+@keyframes loader-fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+.loading-hide {
+  animation: loader-fade 600ms ease forwards;
+}
+
+
+/* Add this to your global CSS (e.g. index.css) */
+.animate-spin-slow {
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

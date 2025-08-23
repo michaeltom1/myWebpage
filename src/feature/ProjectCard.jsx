@@ -1,10 +1,11 @@
 import React from "react";
 
 export default function ProjectCard({ item, onView }) {
+  const hasTitle = Boolean(item && item.title);
   return (
     <article
       className="relative h-80 w-full rounded-3xl overflow-hidden shadow-2xl group transition-transform duration-300 hover:scale-[1.02]"
-      aria-labelledby={`project-${item.id}-title`}
+      aria-labelledby={hasTitle ? `project-${item.id}-title` : undefined}
     >
       <img
         src={item.imgUrl}
@@ -20,12 +21,14 @@ export default function ProjectCard({ item, onView }) {
         <div className="backdrop-blur-md bg-black/40 border border-white/10 rounded-2xl p-4 flex flex-col gap-2">
           <div className="flex items-start justify-between">
             <div>
-              <h3
-                id={`project-${item.id}-title`}
-                className="text-lg font-extrabold text-white"
-              >
-                {item.title || "Untitled Project"}
-              </h3>
+              {hasTitle && (
+                <h3
+                  id={`project-${item.id}-title`}
+                  className="text-lg font-extrabold text-white"
+                >
+                  {item.title}
+                </h3>
+              )}
               {item.tags && (
                 <div className="flex gap-2 mt-2 flex-wrap">
                   {item.tags.map((t, i) => (

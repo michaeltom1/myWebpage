@@ -76,7 +76,7 @@ const NavBar = () => {
                 <li key={item.id}>
                   <Button
                     text={item.name}
-                    linkTo={item.url}
+                    linkTo={MichaelResume}
                     target="_blank"
                     className="!px-6 !py-2 !rounded-xl !font-bold !shadow-lg"
                   />
@@ -137,7 +137,7 @@ const NavBar = () => {
                   <li key={item.id}>
                     <Button
                       text="Resume"
-                      linkTo={item.url}
+                      linkTo={MichaelResume}
                       className="my-6"
                       target="_blank"
                     />

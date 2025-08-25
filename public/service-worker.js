@@ -9,7 +9,8 @@ self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
       // Cache the offline page and the root so the app shell works offline
-      return cache.addAll([OFFLINE_URL, "/"]).then(() => {
+      // include explicit '/index.html' in case the server exposes it
+      return cache.addAll([OFFLINE_URL, "/", "/index.html"]).then(() => {
         // record timestamps for the pre-cached resources
         return caches.open(METADATA).then((meta) => {
           const now = Date.now().toString();
@@ -63,7 +64,17 @@ self.addEventListener("fetch", (event) => {
             );
           return response;
         })
-        .catch(() => caches.match(OFFLINE_URL))
+        .catch(async () => {
+          // Try to serve a cached version of the navigation request first
+          const cachedRequest = await caches.match(request);
+          if (cachedRequest) return cachedRequest;
+          // Fallback to the cached root or index.html
+          const root =
+            (await caches.match("/")) || (await caches.match("/index.html"));
+          if (root) return root;
+          // fallback to offline page
+          return caches.match(OFFLINE_URL);
+        })
     );
     return;
   }

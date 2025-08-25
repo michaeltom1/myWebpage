@@ -4,14 +4,19 @@ import { projectsItems } from "../../data/data";
 import useScrollFadeIn from "../../feature/useScrollFadeIn";
 import ProjectCard from "../../feature/ProjectCard";
 import ProjectModal from "../../feature/ProjectModal";
+import ImageViewer from "../../feature/ImageViewer";
 import { useState } from "react";
 
 function Projects() {
   const fadeRef = useScrollFadeIn();
   const [active, setActive] = useState(null);
   const [open, setOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = projectsItems.map((p) => p.imgUrl);
 
   function handleView(item) {
+    const idx = projectsItems.findIndex((p) => p.id === item.id);
+    setCurrentIndex(idx >= 0 ? idx : 0);
     setActive(item);
     setOpen(true);
   }
@@ -61,6 +66,16 @@ function Projects() {
           ))}
         </div>
         <ProjectModal item={active} open={open} onClose={handleClose} />
+        <ImageViewer
+          images={images}
+          index={currentIndex}
+          open={open}
+          onClose={handleClose}
+          onChange={(i) => {
+            setCurrentIndex(i);
+            setActive(projectsItems[i]);
+          }}
+        />
       </div>
     </SectionScaffold>
   );
